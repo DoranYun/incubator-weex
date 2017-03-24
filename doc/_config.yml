@@ -49,18 +49,16 @@ jsonContent:
     content: false
     type: true
 
-
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: http://git-wip-us.apache.org/repos/asf/incubator-weex-site.git
-  branch: asf-site
-  target_dir: content
+  repo: git@github.com:DoranYun/incubator-weex.git
+  branch: [gh-pages]
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://weex.apache.org
+url: https://weex-project.io
 root: /
 permalink_defaults:
   lang: en

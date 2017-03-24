@@ -1,27 +1,29 @@
 FROM node:4
 
-RUN apt-get -y update && apt-get install -y curl
-RUN apt-get install -y git
-# RUN curl --silent --location https://rpm.nodesource.com/setup_6.x | bash - && apt-get -y install nodejs
-RUN apt-get install -y nginx
+RUN apt-get update -y
+RUN apt-get install git -y
+RUN apt-get install nginx -y
 RUN mkdir -p /var/www/html/
 RUN rm -rf /var/lib/apt/lists/*
+RUN npm install -g pm2
 
-# ADD nginx/weexweb.conf /etc/nginx/conf.d/
-# ADD nginx/nginx.conf /etc/nginx/nginx.conf
+WORKDIR /var/www/html/
 
-ENV NODE_ENV production
-# Webhook port
-EXPOSE 7777
+RUN git clone -b gh-pages https://github.com/DoranYun/incubator-weex.git /var/www/html/weex/
+RUN cd weex/ && git checkout gh-pages
 
-# nginx port
-EXPOSE 80
+ADD webserver.conf /etc/nginx/conf.d/
+ADD weexsite.conf /etc/nginx/nginx.conf
+ADD deploy.sh /var/www/html/hook/
+ADD server.js /var/www/html/hook/
+ADD hookserver.json /var/www/html/hook/package.json
 
-RUN \
-    npm install -g pm2 && \
-    npm install hexo-cli -g && \
-    git clone -b feature-mirror-site https://github.com/DoranYun/incubator-weex.git /usr/src/weex && \
-    cd /usr/src/weex/doc && \
-    npm install && \
-    pm2 start server.js
+RUN cd hook && npm install
+EXPOSE 80 7777
 
+# RUN pm2 start /var/www/html/hook/server.js
+# RUN pm2 save
+# RUN pm2 startup
+# CMD ["pm2", "start", "/var/www/html/hook/server.js"]
+
+CMD ["nginx", "-g", "daemon off;"]

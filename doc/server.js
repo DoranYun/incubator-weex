@@ -1,9 +1,9 @@
 var http = require('http');
 var createHandler = require('github-webhook-handler');
 var handler = createHandler({ path: '/', secret: 'deployweexwebsite' });
+var spawn = require('child_process').spawn;
 
 function run_cmd(cmd, args, callback) {
-  var spawn = require('child_process').spawn;
   var child = spawn(cmd, args);
   var resp = '';
  
@@ -19,5 +19,13 @@ http.createServer(function (req, res) {
 }).listen(7777);
 
 handler.on('push', function (event) {
-  run_cmd('sh', ['./deploy.sh'], function(text){ console.log(text) });
+  if (event.payload.ref == 'refs/heads/gh-pages') {
+    run_cmd('sh', ['./deploy.sh'], function(text){ console.log(text) });
+  } else {
+    console.log('This push is not doc branch.');
+  }
+})
+
+handler.on('error', function (event) {
+  console.log('error');
 })

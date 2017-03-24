@@ -1,17 +1,11 @@
 #!/bin/bash
 
-WEB_PATH='/var/www/html'
-SOURCE_PATH='/usr/src/weex'
+WEB_PATH='/var/www/html/weex'
  
 echo "Start deployment"
-cd $SOURCE_PATH
+cd $WEB_PATH
 echo "pulling source code..."
-git chechout feature-mirror-site
-git pull origin feature-mirror-site
-git checkout feature-mirror-site
-cd doc
-npm install
-hexo clean
-hexo g
-cp -R public $WEB_PATH
+git checkout gh-pages
+git pull origin gh-pages
+git checkout gh-pages
 echo "Finished."
