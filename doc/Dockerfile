@@ -3,6 +3,7 @@ FROM node:4
 RUN apt-get update -y
 RUN apt-get install git -y
 RUN apt-get install nginx -y
+RUN apt-get install vim -y
 RUN mkdir -p /var/www/html/
 RUN rm -rf /var/lib/apt/lists/*
 RUN npm install -g pm2
