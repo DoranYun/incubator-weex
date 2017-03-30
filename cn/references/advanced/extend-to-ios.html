@@ -5,28 +5,28 @@
   
   <title>iOS 扩展 | Weex</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Module 扩展swift 扩展 module 
+  <meta name="description" content="Module 扩展swift 扩展 module
 Weex SDK 只提供渲染，而不是其他的能力，如果你需要 像网络，图片，URL跳转这些特性，需要自己动手实现他们例如，如果你想实现一个url地址跳转函数，你可以按照如下步骤实现一个 Module
-自定义module的步骤
-自定义的module类 必须实现 WXModuleProtocol
-必须添加宏WX_EXPORT_METHOD, 它可以被w">
+自定义 module 的步骤
+自定义的 module类 必须实现 WXModuleProtocol
+必须添加宏 WX_EXPORT_METHOD, 它可">
 <meta property="og:type" content="website">
 <meta property="og:title" content="iOS 扩展">
 <meta property="og:url" content="https://weex-project.io/cn/references/advanced/extend-to-ios.html">
 <meta property="og:site_name" content="Weex">
-<meta property="og:description" content="Module 扩展swift 扩展 module 
+<meta property="og:description" content="Module 扩展swift 扩展 module
 Weex SDK 只提供渲染，而不是其他的能力，如果你需要 像网络，图片，URL跳转这些特性，需要自己动手实现他们例如，如果你想实现一个url地址跳转函数，你可以按照如下步骤实现一个 Module
-自定义module的步骤
-自定义的module类 必须实现 WXModuleProtocol
-必须添加宏WX_EXPORT_METHOD, 它可以被w">
-<meta property="og:updated_time" content="2017-03-30T02:44:07.000Z">
+自定义 module 的步骤
+自定义的 module类 必须实现 WXModuleProtocol
+必须添加宏 WX_EXPORT_METHOD, 它可">
+<meta property="og:updated_time" content="2017-03-30T03:23:52.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS 扩展">
-<meta name="twitter:description" content="Module 扩展swift 扩展 module 
+<meta name="twitter:description" content="Module 扩展swift 扩展 module
 Weex SDK 只提供渲染，而不是其他的能力，如果你需要 像网络，图片，URL跳转这些特性，需要自己动手实现他们例如，如果你想实现一个url地址跳转函数，你可以按照如下步骤实现一个 Module
-自定义module的步骤
-自定义的module类 必须实现 WXModuleProtocol
-必须添加宏WX_EXPORT_METHOD, 它可以被w">
+自定义 module 的步骤
+自定义的 module类 必须实现 WXModuleProtocol
+必须添加宏 WX_EXPORT_METHOD, 它可">
   
     <link rel="alternate" href="/atom.xml" title="Weex" type="application/atom+xml">
   
@@ -565,11 +565,11 @@ Weex SDK 只提供渲染，而不是其他的能力，如果你需要 像网络�
               </li>
             
               <li>
-                <a href="/cn/references/modules/picker.html" class="sidebar-link  ">picker</a>
+                <a href="/cn/references/modules/websocket.html" class="sidebar-link  ">WebSocket</a>
               </li>
             
               <li>
-                <a href="/cn/references/modules/websocket.html" class="sidebar-link  ">WebSocket</a>
+                <a href="/cn/references/modules/picker.html" class="sidebar-link  ">picker</a>
               </li>
             
               <li>
@@ -1162,11 +1162,11 @@ Weex SDK 只提供渲染，而不是其他的能力，如果你需要 像网络�
               </li>
             
               <li>
-                <a href="/cn/references/modules/picker.html" class="sidebar-link  ">picker</a>
+                <a href="/cn/references/modules/websocket.html" class="sidebar-link  ">WebSocket</a>
               </li>
             
               <li>
-                <a href="/cn/references/modules/websocket.html" class="sidebar-link  ">WebSocket</a>
+                <a href="/cn/references/modules/picker.html" class="sidebar-link  ">picker</a>
               </li>
             
               <li>
@@ -1327,38 +1327,38 @@ Weex SDK 只提供渲染，而不是其他的能力，如果你需要 像网络�
       </h1>
     
   
-  <time class="article-date" datetime="2017-03-30T02:44:07.000Z">Updated time: 30/03/2017</time>
+  <time class="article-date" datetime="2017-03-30T03:23:52.000Z">Updated time: 30/03/2017</time>
 </header>
-    <h2 id="Module-扩展"><a href="#Module-扩展" class="headerlink" title="Module 扩展"></a>Module 扩展</h2><p><a href="https://github.com/weexteam/article/issues/55" target="_blank" rel="external">swift</a> 扩展 module </p>
+    <h2 id="Module-扩展"><a href="#Module-扩展" class="headerlink" title="Module 扩展"></a>Module 扩展</h2><p><a href="https://github.com/weexteam/article/issues/55" target="_blank" rel="external">swift</a> 扩展 module</p>
 <p>Weex SDK 只提供渲染，而不是其他的能力，如果你需要 像网络，图片，URL跳转这些特性，需要自己动手实现他们<br>例如，如果你想实现一个url地址跳转函数，你可以按照如下步骤实现一个 Module</p>
-<h3 id="自定义module的步骤"><a href="#自定义module的步骤" class="headerlink" title="自定义module的步骤"></a><strong>自定义module的步骤</strong></h3><ol>
-<li>自定义的module类 必须实现 <code>WXModuleProtocol</code></li>
-<li>必须添加宏<code>WX_EXPORT_METHOD</code>, 它可以被weex识别，它的参数是 JavaScript调用 module指定方法的参数</li>
-<li>添加<code>@synthesized weexInstance</code>，每个moudle对象被绑定到一个指定的实例上</li>
-<li>Module 方法会在UI线程中被调用，所以不要做太多耗时的任务在这里，如果要在其他线程执行整个module 方法，需要实现<code>WXModuleProtocol</code>中<code>- (NSThread *)targetExecuteThread</code>的方法，这样，分发到这个module的任务会在指定的线程中运行</li>
+<h3 id="自定义-module-的步骤"><a href="#自定义-module-的步骤" class="headerlink" title="自定义 module 的步骤"></a><strong>自定义 module 的步骤</strong></h3><ol>
+<li>自定义的 module类 必须实现 <code>WXModuleProtocol</code></li>
+<li>必须添加宏 <code>WX_EXPORT_METHOD</code>, 它可以被 weex 识别，它的参数是 JavaScript 调用 module 指定方法的参数</li>
+<li>添加 <code>@synthesized weexInstance</code>，每个moudle对象被绑定到一个指定的实例上</li>
+<li>Module 方法会在UI线程中被调用，所以不要做太多耗时的任务在这里，如果要在其他线程执行整个 module 方法，需要实现 <code>WXModuleProtocol</code>中<code>- (NSThread *)targetExecuteThread</code> 的方法，这样，分发到这个module的任务会在指定的线程中运行</li>
 <li>Weex 的参数可以是 String 或者Map</li>
-<li><p>Module 支持返回值给 JavaScript中的回调，回调的类型是<code>WXModuleCallback</code>,回调的参数可以是String或者Map</p>
+<li><p>Module 支持返回值给 JavaScript中的回调，回调的类型是 <code>WXModuleCallback</code>, 回调的参数可以是 String 或者 Map</p>
  <figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">@implementation WXEventModule</div><div class="line">@synthesize weexInstance;</div><div class="line">    WX_EXPORT_METHOD(@selector(openURL:callback))</div><div class="line">- (void)openURL:(NSString *)url callback:(WXModuleCallback)callback</div><div class="line">&#123;</div><div class="line">    NSString *newURL = url;</div><div class="line">    if ([url hasPrefix:@&quot;//&quot;]) &#123;</div><div class="line">        newURL = [NSString stringWithFormat:@&quot;http:%@&quot;, url];</div><div class="line">    &#125; else if (![url hasPrefix:@&quot;http&quot;]) &#123;</div><div class="line">        newURL = [NSURL URLWithString:url relativeToURL:weexInstance.scriptURL].absoluteString;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    UIViewController *controller = [[WXDemoViewController alloc] init];</div><div class="line">    ((WXDemoViewController *)controller).url = [NSURL URLWithString:newURL];</div><div class="line"></div><div class="line">    [[weexInstance.viewController navigationController] pushViewController:controller animated:YES];</div><div class="line">    callback(@&#123;@&quot;result&quot;:@&quot;success&quot;&#125;);</div><div class="line">&#125;</div><div class="line"></div><div class="line">@end</div></pre></td></tr></table></figure>
 </li>
 </ol>
-<h4 id="暴露同步方法v0-10"><a href="#暴露同步方法v0-10" class="headerlink" title="暴露同步方法v0.10+"></a>暴露同步方法<span class="api-version">v0.10+</span></h4><p>如果你想要暴露同步的native方法给JS， 即JS可以直接拿到Native的返回值。 你可以使用<code>WX_EXPORT_METHOD_SYNC</code> 宏。</p>
+<h4 id="暴露同步方法v0-10"><a href="#暴露同步方法v0-10" class="headerlink" title="暴露同步方法v0.10+"></a>暴露同步方法<span class="api-version">v0.10+</span></h4><p>如果你想要暴露同步的 native 方法给 JS， 即 JS 可以直接拿到 Native 的返回值。 你可以使用<code>WX_EXPORT_METHOD_SYNC</code> 宏。</p>
 <p>native 代码:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">@implementation WXEventModule</div><div class="line"></div><div class="line">WX_EXPORT_METHOD_SYNC(@selector(getString))</div><div class="line">  </div><div class="line">- (NSString *)getString</div><div class="line">&#123;</div><div class="line">    return @&quot;testString&quot;;</div><div class="line">&#125;</div><div class="line"></div><div class="line">@end</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">@implementation WXEventModule</div><div class="line"></div><div class="line">WX_EXPORT_METHOD_SYNC(@selector(getString))</div><div class="line"></div><div class="line">- (NSString *)getString</div><div class="line">&#123;</div><div class="line">    return @&quot;testString&quot;;</div><div class="line">&#125;</div><div class="line"></div><div class="line">@end</div></pre></td></tr></table></figure>
 <p>js 代码:</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">const</span> eventModule = weex.requireModule(<span class="string">'event'</span>)</div><div class="line"><span class="keyword">const</span> returnString = syncTest.getString()  <span class="comment">// return "testString"</span></div></pre></td></tr></table></figure>
-<p>除了string, 你也可以返回 <code>number/array/dictionary</code> 类型.</p>
-<p><code>注意:</code>  暴露的同步方法只能在 JS 线程执行，请不要做太多同步的工作导致JS执行阻塞。</p>
+<p>除了 string, 你也可以返回 <code>number/array/dictionary</code> 类型.</p>
+<p><code>注意:</code>  暴露的同步方法只能在 JS 线程执行，请不要做太多同步的工作导致 JS 执行阻塞。</p>
 <p><code>注意:</code>  Vue 2.0 还未支持这个特性，最早会在 0.12 版本支持</p>
-<h3 id="注册-module"><a href="#注册-module" class="headerlink" title="注册 module"></a>注册 module</h3><p>通过调用 WXSDKEngine 中的 <code>registerModule:withClass</code>方法来注册自己的module</p>
+<h3 id="注册-module"><a href="#注册-module" class="headerlink" title="注册 module"></a>注册 module</h3><p>通过调用 WXSDKEngine 中的 <code>registerModule:withClass</code> 方法来注册自己的 module</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">WXSDKEngine.h</div><div class="line">/**</div><div class="line">*  @abstract Registers a module for a given name</div><div class="line">*  @param name The module name to register</div><div class="line">*  @param clazz  The module class to register</div><div class="line">**/</div><div class="line">+ (void)registerModule:(NSString *)name withClass:(Class)clazz;</div><div class="line">[WXSDKEngine registerModule:@&quot;event&quot; withClass:[WXEventModule class]];</div></pre></td></tr></table></figure>
 <h3 id="使用自己的-module"><a href="#使用自己的-module" class="headerlink" title="使用自己的 module"></a>使用自己的 module</h3><p>这里的 require 里面的 event 就是在 上一步调用 <code>registerModule:</code> 注册 module 时候的 name</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> eventModule = weex.requireModule(<span class="string">'event'</span>); </div><div class="line">eventModule.openURL(<span class="string">'url'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">ret</span>) </span>&#123;   </div><div class="line">    nativeLog(ret);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> eventModule = weex.requireModule(<span class="string">'event'</span>);</div><div class="line">eventModule.openURL(<span class="string">'url'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">ret</span>) </span>&#123;</div><div class="line">    nativeLog(ret);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 <p>Weex SDK 没有 图片下载，navigation 操作的能力，请大家自己实现这些 protocol</p>
 <h2 id="WXImgLoaderProtocol"><a href="#WXImgLoaderProtocol" class="headerlink" title="WXImgLoaderProtocol"></a>WXImgLoaderProtocol</h2><p>weexSDK 没有图片下载的能力，需要实现 WXImgLoaderProtocol, 参考下面的例子</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">WXImageLoaderProtocol.h</div><div class="line">@protocol WXImgLoaderProtocol &lt;WXModuleProtocol&gt;</div><div class="line">/**</div><div class="line">* @abstract Creates a image download handler with a given URL</div><div class="line">* @param imageUrl The URL of the image to download</div><div class="line">* @param imageFrame  The frame of the image you want to set</div><div class="line">* @param options : The options to be used for this download</div><div class="line">* @param completedBlock : A block called once the download is completed.</div><div class="line">    image : the image which has been download to local.</div><div class="line">    error : the error which has happened in download.</div><div class="line">    finished : a Boolean value indicating whether download action has finished.</div><div class="line">*/</div><div class="line">-(id&lt;WXImageOperationProtocol&gt;)downloadImageWithURL:(NSString *)url imageFrame:(CGRect)imageFrame userInfo:(NSDictionary *)options completed:(void(^)(UIImage *image,  NSError *error, BOOL finished))completedBlock;</div><div class="line">@end</div></pre></td></tr></table></figure>
-<p>实现上述协议  </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">@implementation WXImgLoaderDefaultImpl</div><div class="line">#pragma mark -</div><div class="line">#pragma mark WXImgLoaderProtocol</div><div class="line"></div><div class="line">- (id&lt;WXImageOperationProtocol&gt;)downloadImageWithURL:(NSString *)url imageFrame:(CGRect)imageFrame userInfo:(NSDictionary *)userInfo completed:(void(^)(UIImage *image,  NSError *error, BOOL finished))completedBlock</div><div class="line">&#123;</div><div class="line">    if ([url hasPrefix:@&quot;//&quot;]) &#123;</div><div class="line">        url = [@&quot;http:&quot; stringByAppendingString:url];</div><div class="line">    &#125;</div><div class="line">    return (id&lt;WXImageOperationProtocol&gt;)[[SDWebImageManager sharedManager] downloadImageWithURL:[NSURL URLWithString:url] options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) &#123;     </div><div class="line">    &#125; completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) &#123;</div><div class="line">    if (completedBlock) &#123;</div><div class="line">        completedBlock(image, error, finished);</div><div class="line">    &#125;</div><div class="line">    &#125;];</div><div class="line">&#125;</div><div class="line">@end</div></pre></td></tr></table></figure>
-<h3 id="handler注册"><a href="#handler注册" class="headerlink" title="handler注册"></a>handler注册</h3><p>你可以通过WXSDKEngine 中的 <code>registerHandler:withProtocol</code>注册handler</p>
+<p>实现上述协议</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">@implementation WXImgLoaderDefaultImpl</div><div class="line">#pragma mark -</div><div class="line">#pragma mark WXImgLoaderProtocol</div><div class="line"></div><div class="line">- (id&lt;WXImageOperationProtocol&gt;)downloadImageWithURL:(NSString *)url imageFrame:(CGRect)imageFrame userInfo:(NSDictionary *)userInfo completed:(void(^)(UIImage *image,  NSError *error, BOOL finished))completedBlock</div><div class="line">&#123;</div><div class="line">    if ([url hasPrefix:@&quot;//&quot;]) &#123;</div><div class="line">        url = [@&quot;http:&quot; stringByAppendingString:url];</div><div class="line">    &#125;</div><div class="line">    return (id&lt;WXImageOperationProtocol&gt;)[[SDWebImageManager sharedManager] downloadImageWithURL:[NSURL URLWithString:url] options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) &#123;</div><div class="line">    &#125; completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) &#123;</div><div class="line">    if (completedBlock) &#123;</div><div class="line">        completedBlock(image, error, finished);</div><div class="line">    &#125;</div><div class="line">    &#125;];</div><div class="line">&#125;</div><div class="line">@end</div></pre></td></tr></table></figure>
+<h3 id="handler-注册"><a href="#handler-注册" class="headerlink" title="handler 注册"></a>handler 注册</h3><p>你可以通过 WXSDKEngine 中的 <code>registerHandler:withProtocol</code> 注册 handler</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">WXSDKEngine.h</div><div class="line">/**</div><div class="line">* @abstract Registers a handler for a given handler instance and specific protocol</div><div class="line">* @param handler The handler instance to register</div><div class="line">* @param protocol The protocol to confirm</div><div class="line">*/</div><div class="line">+ (void)registerHandler:(id)handler withProtocol:(Protocol *)protocol;</div><div class="line"></div><div class="line">[WXSDKEngine registerHandler:[WXImgLoaderDefaultImpl new] withProtocol:@protocol(WXImgLoaderProtocol)]</div></pre></td></tr></table></figure>
 <h2 id="Components-扩展"><a href="#Components-扩展" class="headerlink" title="Components 扩展"></a>Components 扩展</h2><p>虽然 WeexSDK 中有很多的 native 的 Component，但这有可能并不能满足你的需求。在之前你可能已经写了一些很酷炫 native 的组件，想包装一下，导入到 Weex 中，因此我们提供了让开发者实现自己的 native Component。下面将以 WeexSDK 中已经存在的 Component：<code>image</code> 为例子，介绍一下如何构建一个 native Component。假设你已经了解 iOS 开发</p>
 <h3 id="注册-Component"><a href="#注册-Component" class="headerlink" title="注册 Component"></a>注册 Component</h3><p>注册一个 component 比较简单，调用 <code>WXSDKEngine</code> 中的 <code>registerComponent:withClass:</code> 方法，传入组件的标签名称，还有对应的 class  然后你可以创建一个 <code>WXImageComponent</code> 表示 <code>image</code> 组件的实现。在 <code>.we</code> 文件中，只需要写 <code>&lt;image&gt;&lt;/image&gt;</code></p>
@@ -1434,7 +1434,7 @@ Weex SDK 只提供渲染，而不是其他的能力，如果你需要 像网络�
 <h5 id="component-方法"><a href="#component-方法" class="headerlink" title="component 方法"></a>component 方法</h5><p>WeexSDK 0.9.5 之后支持了在 js 中直接调用 component 的方法，这里提供一个例子</p>
 <ul>
 <li><p>自定义一个 WXMyCompoenent 的组件</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">@implementation WXMyComponent</div><div class="line">WX_EXPORT_METHOD(@selector(focus)) // 暴露该方法给js</div><div class="line">- (instancetype)initWithRef:(NSString *)ref type:(NSString *)type styles:(NSDictionary *)styles attributes:(NSDictionary *)attributes events:(NSArray *)events weexInstance:(WXSDKInstance *)weexInstance</div><div class="line">&#123;</div><div class="line">    if (self = [super initWithRef:ref type:type styles:styles attributes:attributes events:events weexInstance:weexInstance]) &#123;</div><div class="line">        // handle your attributes</div><div class="line">        // handle your styles</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    return self;</div><div class="line">&#125;</div><div class="line"></div><div class="line">- (void)focus</div><div class="line">&#123;</div><div class="line">    NSLog(@&quot;you got it&quot;);</div><div class="line">&#125;</div><div class="line">@end</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">@implementation WXMyComponent</div><div class="line">WX_EXPORT_METHOD(@selector(focus)) // 暴露该方法给js</div><div class="line">- (instancetype)initWithRef:(NSString *)ref type:(NSString *)type styles:(NSDictionary *)styles attributes:(NSDictionary *)attributes events:(NSArray *)events weexInstance:(WXSDKInstance *)weexInstance</div><div class="line">&#123;</div><div class="line">    if (self = [super initWithRef:ref type:type styles:styles attributes:attributes events:events weexInstance:weexInstance]) &#123;</div><div class="line">        // handle your attributes</div><div class="line">        // handle your styles</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    return self;</div><div class="line">&#125;</div><div class="line"></div><div class="line">- (void)focus</div><div class="line">&#123;</div><div class="line">    NSLog(@&quot;you got it&quot;);</div><div class="line">&#125;</div><div class="line">@end</div></pre></td></tr></table></figure>
 </li>
 <li><p>注册组件 <code>[WXSDKEngine registerComponent:@&quot;mycomponent&quot; withClass:[WXMyComponent class]]</code></p>
 </li>
