@@ -7,18 +7,18 @@ version: 2.1
 
 ## Module 扩展
 
-[swift](https://github.com/weexteam/article/issues/55) 扩展 module 
+[swift](https://github.com/weexteam/article/issues/55) 扩展 module
 
 Weex SDK 只提供渲染，而不是其他的能力，如果你需要 像网络，图片，URL跳转这些特性，需要自己动手实现他们
 例如，如果你想实现一个url地址跳转函数，你可以按照如下步骤实现一个 Module
 
-### **自定义module的步骤**
-1. 自定义的module类 必须实现 `WXModuleProtocol`
-2. 必须添加宏`WX_EXPORT_METHOD`, 它可以被weex识别，它的参数是 JavaScript调用 module指定方法的参数
-3. 添加`@synthesized weexInstance`，每个moudle对象被绑定到一个指定的实例上
-4. Module 方法会在UI线程中被调用，所以不要做太多耗时的任务在这里，如果要在其他线程执行整个module 方法，需要实现`WXModuleProtocol`中`- (NSThread *)targetExecuteThread`的方法，这样，分发到这个module的任务会在指定的线程中运行
+### **自定义 module 的步骤**
+1. 自定义的 module类 必须实现 `WXModuleProtocol`
+2. 必须添加宏 `WX_EXPORT_METHOD`, 它可以被 weex 识别，它的参数是 JavaScript 调用 module 指定方法的参数
+3. 添加 `@synthesized weexInstance`，每个moudle对象被绑定到一个指定的实例上
+4. Module 方法会在UI线程中被调用，所以不要做太多耗时的任务在这里，如果要在其他线程执行整个 module 方法，需要实现 `WXModuleProtocol`中`- (NSThread *)targetExecuteThread` 的方法，这样，分发到这个module的任务会在指定的线程中运行
 5. Weex 的参数可以是 String 或者Map
-6. Module 支持返回值给 JavaScript中的回调，回调的类型是`WXModuleCallback`,回调的参数可以是String或者Map
+6. Module 支持返回值给 JavaScript中的回调，回调的类型是 `WXModuleCallback`, 回调的参数可以是 String 或者 Map
 
     ```object-c
     @implementation WXEventModule
@@ -45,7 +45,7 @@ Weex SDK 只提供渲染，而不是其他的能力，如果你需要 像网络�
 
 #### 暴露同步方法<span class="api-version">v0.10+</span>
 
-如果你想要暴露同步的native方法给JS， 即JS可以直接拿到Native的返回值。 你可以使用`WX_EXPORT_METHOD_SYNC` 宏。
+如果你想要暴露同步的 native 方法给 JS， 即 JS 可以直接拿到 Native 的返回值。 你可以使用`WX_EXPORT_METHOD_SYNC` 宏。
 
 native 代码:
 
@@ -53,7 +53,7 @@ native 代码:
 @implementation WXEventModule
 
 WX_EXPORT_METHOD_SYNC(@selector(getString))
-  
+
 - (NSString *)getString
 {
     return @"testString";
@@ -69,9 +69,9 @@ const eventModule = weex.requireModule('event')
 const returnString = syncTest.getString()  // return "testString"
 ```
 
-除了string, 你也可以返回 `number/array/dictionary` 类型.
+除了 string, 你也可以返回 `number/array/dictionary` 类型.
 
-`注意:`  暴露的同步方法只能在 JS 线程执行，请不要做太多同步的工作导致JS执行阻塞。
+`注意:`  暴露的同步方法只能在 JS 线程执行，请不要做太多同步的工作导致 JS 执行阻塞。
 
 `注意:`  Vue 2.0 还未支持这个特性，最早会在 0.12 版本支持
 
@@ -79,7 +79,7 @@ const returnString = syncTest.getString()  // return "testString"
 
 ### 注册 module
 
-通过调用 WXSDKEngine 中的 `registerModule:withClass`方法来注册自己的module
+通过调用 WXSDKEngine 中的 `registerModule:withClass` 方法来注册自己的 module
 
 ```object-c
 WXSDKEngine.h
@@ -97,8 +97,8 @@ WXSDKEngine.h
 这里的 require 里面的 event 就是在 上一步调用 `registerModule:` 注册 module 时候的 name
 
 ```javascript
-var eventModule = weex.requireModule('event'); 
-eventModule.openURL('url',function(ret) {   
+var eventModule = weex.requireModule('event');
+eventModule.openURL('url',function(ret) {
     nativeLog(ret);
 });
 ```
@@ -126,7 +126,7 @@ WXImageLoaderProtocol.h
 @end
 ```
 
-实现上述协议  
+实现上述协议
 
 ```object-c
 @implementation WXImgLoaderDefaultImpl
@@ -138,7 +138,7 @@ WXImageLoaderProtocol.h
     if ([url hasPrefix:@"//"]) {
         url = [@"http:" stringByAppendingString:url];
     }
-    return (id<WXImageOperationProtocol>)[[SDWebImageManager sharedManager] downloadImageWithURL:[NSURL URLWithString:url] options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {     
+    return (id<WXImageOperationProtocol>)[[SDWebImageManager sharedManager] downloadImageWithURL:[NSURL URLWithString:url] options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
     } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
     if (completedBlock) {
         completedBlock(image, error, finished);
@@ -148,9 +148,9 @@ WXImageLoaderProtocol.h
 @end
 ```
 
-### handler注册
+### handler 注册
 
-你可以通过WXSDKEngine 中的 `registerHandler:withProtocol`注册handler
+你可以通过 WXSDKEngine 中的 `registerHandler:withProtocol` 注册 handler
 
 ```object-c
 WXSDKEngine.h
@@ -172,7 +172,7 @@ WXSDKEngine.h
 
 注册一个 component 比较简单，调用 `WXSDKEngine` 中的 `registerComponent:withClass:` 方法，传入组件的标签名称，还有对应的 class  然后你可以创建一个 `WXImageComponent` 表示 `image` 组件的实现。在 `.we` 文件中，只需要写 `<image></image>`
 
-### 添加属性 
+### 添加属性
 
 现在我们要做一些让 image component 更加强大的事情。既然作为一个图片的 component，那它应该要有源，给他加上一个  `src` 的属性，同时给它加上一个 `resize` 的属性（可以配置的有 `contain/cover/stretch`）
 
@@ -232,7 +232,7 @@ return [[WXImageView alloc] init];
 }
 ```
 
-现在我们使用 `WXImageView` 渲染 `image` component。  
+现在我们使用 `WXImageView` 渲染 `image` component。
 作为一个 image component，我们需要拿到服务器图片，而且把它设置进 image view 里. 这个操作可以在 `viewDidLoad` 方法中做，这个方法是在 view 已经被创建而且加载了时候 Weex SDK 会调用到，而且 `viewDidLoad` 这个方法是你做额外初始化工作比如改变 content mode(也就是设置resize) 的最好时间.
 
 ```object-c
@@ -288,7 +288,7 @@ WeexSDK 0.9.5 之后支持了在 js 中直接调用 component 的方法，这里
           // handle your attributes
           // handle your styles
       }
-      
+
       return self;
   }
 
