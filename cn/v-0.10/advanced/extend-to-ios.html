@@ -5,34 +5,16 @@
   
   <title>iOS 扩展 | Weex</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="iOS 扩展Module 扩展swift 扩展 module 
-Weex SDK 只提供渲染，而不是其他的能力，如果你需要 像网络，图片，URL跳转这些特性，需要自己动手实现他们例如，如果你想实现一个url地址跳转函数，你可以按照如下步骤实现一个 Module
-
-自定义module的步骤
-
-自定义的module类 必须实现 WXModuleProtocol
-必须添加宏WX_EXPORT_METHO">
+  <meta name="description" content="iOS 扩展Module 扩展swift 扩展 module  Weex SDK 只提供渲染，而不是其他的能力，如果你需要 像网络，图片，URL跳转这些特性，需要自己动手实现他们例如，如果你想实现一个url地址跳转函数，你可以按照如下步骤实现一个 Module  自定义module的步骤  自定义的module类 必须实现 WXModuleProtocol 必须添加宏WX_EXPORT_METHO">
 <meta property="og:type" content="website">
 <meta property="og:title" content="iOS 扩展">
 <meta property="og:url" content="https://weex-project.io/cn/v-0.10/advanced/extend-to-ios.html">
 <meta property="og:site_name" content="Weex">
-<meta property="og:description" content="iOS 扩展Module 扩展swift 扩展 module 
-Weex SDK 只提供渲染，而不是其他的能力，如果你需要 像网络，图片，URL跳转这些特性，需要自己动手实现他们例如，如果你想实现一个url地址跳转函数，你可以按照如下步骤实现一个 Module
-
-自定义module的步骤
-
-自定义的module类 必须实现 WXModuleProtocol
-必须添加宏WX_EXPORT_METHO">
+<meta property="og:description" content="iOS 扩展Module 扩展swift 扩展 module  Weex SDK 只提供渲染，而不是其他的能力，如果你需要 像网络，图片，URL跳转这些特性，需要自己动手实现他们例如，如果你想实现一个url地址跳转函数，你可以按照如下步骤实现一个 Module  自定义module的步骤  自定义的module类 必须实现 WXModuleProtocol 必须添加宏WX_EXPORT_METHO">
 <meta property="og:updated_time" content="2017-03-30T03:42:55.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS 扩展">
-<meta name="twitter:description" content="iOS 扩展Module 扩展swift 扩展 module 
-Weex SDK 只提供渲染，而不是其他的能力，如果你需要 像网络，图片，URL跳转这些特性，需要自己动手实现他们例如，如果你想实现一个url地址跳转函数，你可以按照如下步骤实现一个 Module
-
-自定义module的步骤
-
-自定义的module类 必须实现 WXModuleProtocol
-必须添加宏WX_EXPORT_METHO">
+<meta name="twitter:description" content="iOS 扩展Module 扩展swift 扩展 module  Weex SDK 只提供渲染，而不是其他的能力，如果你需要 像网络，图片，URL跳转这些特性，需要自己动手实现他们例如，如果你想实现一个url地址跳转函数，你可以按照如下步骤实现一个 Module  自定义module的步骤  自定义的module类 必须实现 WXModuleProtocol 必须添加宏WX_EXPORT_METHO">
   
     <link rel="alternate" href="/atom.xml" title="Weex" type="application/atom+xml">
   
@@ -422,10 +404,10 @@ Weex SDK 只提供渲染，而不是其他的能力，如果你需要 像网络�
 <pre><code class="html"><span class="tag">&lt;<span class="name">template</span>&gt;</span>
   <span class="tag">&lt;<span class="name">mycomponent</span> <span class="attr">id</span>=<span class="string">'mycomponent'</span>&gt;</span><span class="tag">&lt;/<span class="name">mycomponent</span>&gt;</span>
 <span class="tag">&lt;/<span class="name">template</span>&gt;</span>
-<span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined">
-  module.exports = {
-    created: function() {
-      this.$el('mycomponent').focus();
+<span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript">
+  <span class="built_in">module</span>.exports = {
+    <span class="attr">created</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
+      <span class="keyword">this</span>.$el(<span class="string">'mycomponent'</span>).focus();
     }
   }
 </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
@@ -459,11 +441,10 @@ Weex SDK 只提供渲染，而不是其他的能力，如果你需要 像网络�
     </div>
   </div>
   <div class="row">
-    <p><span>Released under </span><a href="">Apache License 2.0</a></p>
+    <p><span>Released under </span>Apache License 2.0</p>
   </div>
   <div class="row clearfix">
-    <div class="cell"><span>Copyright(c) 2016 </span><a href="https://www.alibaba.com">Alibaba</a></div>
-    <div class="cell"><span>Designed by </span><a href="">阿里云UED AX</a></div>
+    <div class="cell">Copyright(c) 2009-2017 The Apache Software Foundation</div>
   </div>
 </footer>
   <div style="display: none;">

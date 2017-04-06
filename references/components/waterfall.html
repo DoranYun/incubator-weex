@@ -3,17 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2016 | Weex</title>
+  <title>Weex</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="A framework for building Mobile cross-platform UIs. Different from a &quot;web app&quot;, &quot;HTML5 app&quot;, or &quot;hybrid app&quot;, you can use Weex to build a real mobile app. The code that you write is relatively simple,">
+  <meta name="description" content="-– title:  type: references order: 2.5 version: 2.1 -– waterfallv0.11.0+ A component providing waterfall layout. Child ComponentsNotes: The waterfall now supports the following child components: cell,">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Weex">
-<meta property="og:url" content="https://weex-project.io/archives/2016/index.html">
+<meta property="og:url" content="https://weex-project.io/references/components/waterfall.html">
 <meta property="og:site_name" content="Weex">
-<meta property="og:description" content="A framework for building Mobile cross-platform UIs. Different from a &quot;web app&quot;, &quot;HTML5 app&quot;, or &quot;hybrid app&quot;, you can use Weex to build a real mobile app. The code that you write is relatively simple,">
+<meta property="og:description" content="-– title:  type: references order: 2.5 version: 2.1 -– waterfallv0.11.0+ A component providing waterfall layout. Child ComponentsNotes: The waterfall now supports the following child components: cell,">
+<meta property="og:updated_time" content="2017-04-06T09:17:09.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Weex">
-<meta name="twitter:description" content="A framework for building Mobile cross-platform UIs. Different from a &quot;web app&quot;, &quot;HTML5 app&quot;, or &quot;hybrid app&quot;, you can use Weex to build a real mobile app. The code that you write is relatively simple,">
+<meta name="twitter:description" content="-– title:  type: references order: 2.5 version: 2.1 -– waterfallv0.11.0+ A component providing waterfall layout. Child ComponentsNotes: The waterfall now supports the following child components: cell,">
   
     <link rel="alternate" href="/atom.xml" title="Weex" type="application/atom+xml">
   
@@ -24,10 +25,10 @@
   <link rel="stylesheet" href="/css/swiper.min.css">
 </head>
 
-<body id="archives/2016/index" class="lang-en">
+<body id="references/components/waterfall" class="lang-en">
   
   <script>
-    window.PAGE_TYPE = "archives/2016/index";
+    window.PAGE_TYPE = "references/components/waterfall";
     window.ROOT = "/"
   </script>
   <header id="header">
@@ -80,10 +81,10 @@
             </a>
             <ul class="dropdown-menu pick-lang">
               <li>
-                <a href="/archives/2016/index.html" data-lang="en">English</a>
+                <a href="/references/components/waterfall.html" data-lang="en">English</a>
               </li>
               <li>
-                <a href="/cn/archives/2016/index.html" data-lang="zh-cn">中文</a>
+                <a href="/cn/references/components/waterfall.html" data-lang="zh-cn">中文</a>
               </li>
             </ul>
           </div>
@@ -160,29 +161,83 @@
   </div>
 </div>
 
-  <div class="blog-wrapper">
-  <div class="archives">
-  
+  <div class="article-wrapper page-layout">
+  <div class="doc-nav">
     
-      <article class="blog-article blog-type-post">
-  <div class="blog-article-inner">
+
+
+<div class="summary">
+  <h2 class="part-title">
+    
+  </h2>
+  <ul class="doc-summary">
+    
+    
+    
+   
+    
+    
+    
+      <li>
+        <h3 class="chapter-title"><a href="/v-0.10/undefined/index.html" class="sidebar-link">Old Syntax Doc</a></h3>
+      </li>
+    
+  </ul>
+</div>
+  </div>
+  
+
+<article class="article article-type-references/components/waterfall">
+  <div class="article-entry" itemprop="articleBody">
     <header class="article-header">
   
-    
-      <h1 itemprop="name">
-        <a class="article-title" href="/en/hello-world/">Hello World</a>
-      </h1>
-    
-  
-  <time class="article-date" datetime="2017-03-30T03:42:55.000Z">Updated time: 30/03/2017</time>
+  <time class="article-date" datetime="2017-04-06T09:17:09.000Z">Updated time: 06/04/2017</time>
 </header>
-    
+    <p>-–</p>
+<p>title: <waterfall></waterfall></p>
+<p>type: references</p>
+<p>order: 2.5</p>
+<p>version: 2.1</p>
+<p>-–</p>
+<h1 id="waterfall"><a href="#waterfall" class="headerlink" title="waterfall"></a>waterfall</h1><p><span class="weex-version">v0.11.0+</span></p>
+<p>A component providing waterfall layout.</p>
+<h3 id="Child-Components"><a href="#Child-Components" class="headerlink" title="Child Components"></a>Child Components</h3><p>Notes: The waterfall now supports the following child components: cell, header, refresh, loading and fixed-position components. Other kinds of components will not be guaranteed to be displayed correctly. </p>
+<ul>
+<li>cell: presents the content for a single data item in waterfall</li>
+<li>header: components that need to stretch across multiple columns. It can be sticky by using css position.</li>
+</ul>
+<h3 id="Attributes"><a href="#Attributes" class="headerlink" title="Attributes"></a>Attributes</h3><ul>
+<li><strong>column-width</strong> : This property describes the width of columns in waterfall elements.<ul>
+<li><code>auto</code>: means that the column width will be determined by other properties(e.g., column-count, if it has a non-auto value).</li>
+<li><code>&lt;length&gt;</code>: describes the optimal column width. The actual column width may be wider (to fill the available space), or narrower (only if the available space is smaller than the specified column width). Specified values must be greater than 0.</li>
+</ul>
+</li>
+<li><strong>column-count</strong>:This property describes the number of columns of a multicol element.<ul>
+<li><code>auto</code>: means that the number of columns will be determined by other properties (e.g., column-width, if it has a non-auto value).</li>
+<li><code>&lt;integer&gt;</code>: describes the optimal number of columns into which the content of the element will be flowed. Values must be greater than 0. If both column-width and column-count have non-auto values, the integer value describes the maximum number of columns.</li>
+</ul>
+</li>
+<li><strong>column-gap</strong>:sets the gap between columns. if <code>normal</code> is specified,  the gap will be <code>32</code>.</li>
+</ul>
+<p>To see other attributes,  please checkout <a href="./list.html">List Component Attributes</a> </p>
+<h3 id="Styles"><a href="#Styles" class="headerlink" title="Styles"></a>Styles</h3><p>common styles: check out <a href="../common-style.html">common styles for components</a></p>
+<ul>
+<li>support flexbox related styles</li>
+<li>support box model related styles</li>
+<li>support position related styles</li>
+<li>support opacity, background-color etc.</li>
+</ul>
+<h3 id="Events"><a href="#Events" class="headerlink" title="Events"></a>Events</h3><p>common events: check out the <a href="../common-event.html">common events</a></p>
+<ul>
+<li>support onclick event. Check out <a href="../common-event.html">common events</a></li>
+<li>support onappear / ondisappear event. Check out <a href="../common-event.html">common events</a></li>
+</ul>
+<h3 id="API"><a href="#API" class="headerlink" title="API"></a>API</h3><p>All subcomponents in waterfall support the scrollToElement API in <a href="../modules/dom.html">dom module</a></p>
+<h3 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h3><p>see <a href="http://dotwe.org/vue/7a9195643e9e8da352b0d879cdbe68c0" target="_blank" rel="external">playground waterfall example</a></p>
+
   </div>
+  
 </article>
-    
-  
-  
-</div>
 </div>
   
   <footer id="footer">
@@ -197,10 +252,10 @@
       </a>
       <ul class="dropdown-menu pick-lang">
         <li>
-          <a href="/archives/2016/index.html" data-lang="en">English</a>
+          <a href="/references/components/waterfall.html" data-lang="en">English</a>
         </li>
         <li>
-          <a href="/cn/archives/2016/index.html" data-lang="zh-cn">中文</a>
+          <a href="/cn/references/components/waterfall.html" data-lang="zh-cn">中文</a>
         </li>
       </ul>
     </div>
