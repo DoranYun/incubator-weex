@@ -52,7 +52,17 @@
       <ul class="links">
         <li><a href="/guide">Guide</a></li>
         <li><a href="/references">References</a></li>
-        <li><a href="/faq.html">FAQ</a></li>
+        <li class="dropdown">
+          <a href="javascript:;">Note</a>
+          <ul class="dropdown-menu subnav">
+            <li>
+              <a href="/faq.html">FAQ</a>
+            </li>
+            <li>
+              <a href="/releasenote.html">ReleaseNote</a>
+            </li>
+          </ul>
+        </li>
         <li class="dropdown">
             <a href="javascript:;">Services &amp; Tools</a>
             <ul class="dropdown-menu subnav">
@@ -479,7 +489,7 @@
 <p><a href="http://localhost:8080/index.html" target="_blank" rel="external">http://localhost:8080/index.html</a></p>
 <h3 id="preview-Weex-page-in-time"><a href="#preview-Weex-page-in-time" class="headerlink" title="preview Weex page in time"></a>preview Weex page in time</h3><p>weex-toolkit supports previewing your Weex file(<code>.we</code> or <code>.vue</code>) in a watch mode. You only need specify your file path.</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ weex src/foo.vue</div></pre></td></tr></table></figure>
-<p>The browser will auto open the location and you could see the layout and effects of your Weex page. If you have a <a href="https://weex.apache.org/cn/playground.html">Playground</a> app in your mobile devices, you can scan the QR code at the opened page.<br>Try the command below, you’ll preview the whole directory files.</p>
+<p>The browser will auto open the location and you could see the layout and effects of your Weex page. If you have a <a href="https://weex.apache.org/cn/playground.html" target="_blank" rel="external">Playground</a> app in your mobile devices, you can scan the QR code at the opened page.<br>Try the command below, you’ll preview the whole directory files.</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ weex src --entry src/foo.vue</div></pre></td></tr></table></figure>
 <p>You need to specify the directory path and the entry file(<code>--entry</code>).</p>
 <h3 id="build-Weex-project"><a href="#build-Weex-project" class="headerlink" title="build Weex project"></a>build Weex project</h3><p>Use <code>weex compile</code> to build your single weex file or the whole project.<br><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">weex compile src/foo.vue dist</div></pre></td></tr></table></figure></p>

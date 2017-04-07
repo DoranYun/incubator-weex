@@ -52,7 +52,17 @@
       <ul class="links">
         <li><a href="/cn/guide">教程</a></li>
         <li><a href="/cn/references">手册</a></li>
-        <li><a href="/cn/faq.html">FAQ</a></li>
+        <li class="dropdown">
+          <a href="javascript:;">参考</a>
+          <ul class="dropdown-menu subnav">
+            <li>
+              <a href="/cn/faq.html">FAQ</a>
+            </li>
+            <li>
+              <a href="/cn/releasenote.html">版本说明</a>
+            </li>
+          </ul>
+        </li>
         <li class="dropdown">
             <a href="javascript:;">工具和服务</a>
             <ul class="dropdown-menu subnav">
@@ -482,7 +492,7 @@
 <p>然后我们打开浏览器，进入 <code>http://localhost:8080/index.html</code> 即可看到 Weex h5 页面。</p>
 <h3 id="实时预览"><a href="#实时预览" class="headerlink" title="实时预览"></a>实时预览</h3><p><code>weex-toolkit</code> 支持预览你当前开发的weex页面(<code>.we</code>或者<code>.vue</code>)，你只需要指定预览的文件路径即可：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ weex src/foo.vue</div></pre></td></tr></table></figure>
-<p>浏览器会自动弹出页面，这个时候你可以看到你所编辑的 Weex页面的具体效果和页面布局。如果你使用 <a href="https://weex.apache.org/cn/playground.html">Playground</a> 扫描右边的二维码，就能够看到 Weex 在 Android/IOS 设备上的效果了。</p>
+<p>浏览器会自动弹出页面，这个时候你可以看到你所编辑的 Weex页面的具体效果和页面布局。如果你使用 <a href="https://weex.apache.org/cn/playground.html" target="_blank" rel="external">Playground</a> 扫描右边的二维码，就能够看到 Weex 在 Android/IOS 设备上的效果了。</p>
 <p>如果你需要预览整个项目目录，你可以输入这样的命令:</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ weex src --entry src/foo.vue</div></pre></td></tr></table></figure>
 <p>你需要在传入的参数指定预览的目录和入口文件。</p>

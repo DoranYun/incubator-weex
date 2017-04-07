@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Release Note | Weex</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Release Notev0.10.0  New Feature  Support Vue.jsThe Vue.js 2.1.8 (runtime-only build) is in WeexSDK now. You can use Vue.js to build native app by WeexSDK 0.10.0.We reused the original native render e">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Release Note">
+<meta property="og:url" content="https://weex-project.io/releasenote.html">
+<meta property="og:site_name" content="Weex">
+<meta property="og:description" content="Release Notev0.10.0  New Feature  Support Vue.jsThe Vue.js 2.1.8 (runtime-only build) is in WeexSDK now. You can use Vue.js to build native app by WeexSDK 0.10.0.We reused the original native render e">
+<meta property="og:image" content="https://cloud.githubusercontent.com/assets/115201/23015955/ba075876-f46f-11e6-9d88-2ca3096551b9.jpeg">
+<meta property="og:image" content="https://cloud.githubusercontent.com/assets/115201/21414801/e6341b36-c83d-11e6-9e5a-3acdabb592ee.png">
+<meta property="og:image" content="https://img.alicdn.com/tps/TB1O.nwKFXXXXX8XpXXXXXXXXXX-1436-811.png">
+<meta property="og:updated_time" content="2017-04-07T02:59:01.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Release Note">
+<meta name="twitter:description" content="Release Notev0.10.0  New Feature  Support Vue.jsThe Vue.js 2.1.8 (runtime-only build) is in WeexSDK now. You can use Vue.js to build native app by WeexSDK 0.10.0.We reused the original native render e">
+<meta name="twitter:image" content="https://cloud.githubusercontent.com/assets/115201/23015955/ba075876-f46f-11e6-9d88-2ca3096551b9.jpeg">
+  
+    <link rel="alternate" href="/atom.xml" title="Weex" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="//gw.alicdn.com/tps/TB1XNqxPXXXXXcSXVXXXXXXXXXX-64-63.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/swiper.min.css">
+</head>
+
+<body id="releasenote" class="lang-en">
+  
+  <script>
+    window.PAGE_TYPE = "releasenote";
+    window.ROOT = "/"
+  </script>
+  <header id="header">
+  <div class="navbar">
+    <a id="logo" href="/">
+      <img src="//img.alicdn.com/tps/TB1zBLaPXXXXXXeXXXXXXXXXXXX-121-59.svg" />
+    </a>
+    <div class="main-nav">
+      <ul class="links">
+        <li><a href="/guide">Guide</a></li>
+        <li><a href="/references">References</a></li>
+        <li class="dropdown">
+          <a href="javascript:;">Note</a>
+          <ul class="dropdown-menu subnav">
+            <li>
+              <a href="/faq.html">FAQ</a>
+            </li>
+            <li>
+              <a href="/releasenote.html">ReleaseNote</a>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown">
+            <a href="javascript:;">Services &amp; Tools</a>
+            <ul class="dropdown-menu subnav">
+              <li>
+                <a href="/playground.html">Playground</a>
+              </li>
+              <li>
+                <a href="/guide/tools/toolkit.html">Weex-toolkit</a>
+              </li>
+              <li>
+                <a href="http://dotwe.org" target="_blank">Code Snippets</a>
+              </li>
+              <li>
+                <a href="https://market.dotwe.org" target="_blank">Market</a>
+              </li>
+            </ul>
+        </li>
+      </ul>
+      <ul class="info">
+        <li><a href="https://github.com/apache/incubator-weex/" target="_blank"><span class="btn-github iconfont icon-github"></span></a></li>
+      </ul>
+      <ul class="tools">
+        <li>
+          <div class="search">
+  <form id="search-form" class="search-form"> <!-- 搜索框相关 -->
+    <input type="text" id="search-input-header" name="q" results="0" class="form-control search-input" autocomplete="off" autocorrect="off"/>
+    <span class="iconfont icon-search"></span>
+  </form>
+  <div class="results-panel">
+  </div>
+</div>
+        </li>
+        <li>
+          <div class="dropdown select-lang">
+            <a href="javascript:;" class="dropdown-toggle">
+              Language
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu pick-lang">
+              <li>
+                <a href="/releasenote.html" data-lang="en">English</a>
+              </li>
+              <li>
+                <a href="/cn/releasenote.html" data-lang="zh-cn">中文</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <!--<li></li>-->
+      </ul>
+    </div>
+  </div>
+  <div id="mobile-nav">
+    <a id="logo" href="/">
+      <img src="//img.alicdn.com/tps/TB1zBLaPXXXXXXeXXXXXXXXXXXX-121-59.svg" />
+    </a>
+    <a class="btn-menu"><span class="iconfont icon-nav"></span></a>
+  </div>
+</header>
+
+  <div id="sidebar" class="">
+  <div class="sidebar-menu">
+    
+      <ul class="main-nav">
+        <li>
+          <div class="search">
+  <form id="search-form" class="search-form"> <!-- 搜索框相关 -->
+    <input type="text" id="search-input-sidebar" name="q" results="0" class="form-control search-input" autocomplete="off" autocorrect="off"/>
+    <span class="iconfont icon-search"></span>
+  </form>
+  <div class="results-panel">
+  </div>
+</div>
+        </li>
+        <li>
+          <a class="" href="/guide">
+            Guide
+          </a>
+        </li>
+        <li>
+          <a class="" href="/references">
+            References
+          </a>
+        </li>
+        <li>
+          <a href="/faq.html">
+            FAQ
+          </a>
+        </li>
+        <li>
+            <p>Services &amp; Tools</p>
+            <ul class="subnav">
+              <li>
+                <a href="/playground.html">Playground</a>
+              </li>
+              <li>
+                <a href="/guide/tools/devtools.html">Devtools</a>
+              </li>
+              <li>
+                <a href="/guide/tools/weexpack.html">Weexpack</a>
+              </li>
+              <li>
+                <a href="http://dotwe.org" target="_blank">Snippets</a>
+              </li>
+              <li>
+                <a href="https://market.dotwe.org" target="_blank">Market</a>
+              </li>
+            </ul>
+        </li>
+        <li>
+          <a href="https://github.com/apache/incubator-weex/" target="_blank">
+            GitHub
+          </a>
+        </li>
+      </ul>
+    
+    <a class="btn-close-sidebar iconfont  icon-close"></a>
+  </div>
+</div>
+
+  <div class="wrapper article-wrapper post-layout">
+  
+
+<article class="article article-type-releasenote">
+  <div class="article-entry" itemprop="articleBody">
+    <header class="article-header">
+  
+    
+      <h1 class="article-title" itemprop="name">
+        Release Note
+      </h1>
+    
+  
+  <time class="article-date" datetime="2017-04-07T02:59:01.000Z">Updated time: 07/04/2017</time>
+</header>
+    <h1 id="Release-Note"><a href="#Release-Note" class="headerlink" title="Release Note"></a>Release Note</h1><h2 id="v0-10-0"><a href="#v0-10-0" class="headerlink" title="v0.10.0"></a>v0.10.0</h2><hr>
+<ul>
+<li><p>New Feature</p>
+<ul>
+<li>Support Vue.js<br>The Vue.js 2.1.8 (<a href="https://vuejs.org/v2/guide/installation.html#Standalone-vs-Runtime-only-Build" target="_blank" rel="external">runtime-only build</a>) is in WeexSDK now. You can use Vue.js to build native app by WeexSDK 0.10.0.<br>We reused the original native render engine and developed a new renderer (<a href="https://www.npmjs.com/package/weex-vue-render" target="_blank" rel="external">weex-vue-render</a>) for the web platform, which is based on Vue 2.0.<br>The former front-end framework (commonly known as <code>.we</code>), which is inspired by Vue 1.0, is deprecated. Although it still works well in this release, we suggest to migrate it to Vue 2.0.</li>
+<li><p>SDK</p>
+<ul>
+<li><p>New CSS support</p>
+<ul>
+<li><a href="https://weex-project.io/references/text-style.html">text <code>font-weight</code></a><br><code>font-weight</code> can set to [<code>normal</code>|<code>bold</code>] or 100-900.</li>
+<li><p>gradient<br>like CSS3, now you can use gradient in Weex. For example:   </p>
+<figure class="highlight css"><table><tr><td class="code"><pre><div class="line"><span class="selector-tag">background-image</span>: <span class="selector-tag">linear-gradient</span>(<span class="selector-tag">to</span> <span class="selector-tag">right</span>, <span class="selector-tag">blue</span>, <span class="selector-tag">white</span>);</div></pre></td></tr></table></figure>
+<p><img src="https://cloud.githubusercontent.com/assets/115201/23015955/ba075876-f46f-11e6-9d88-2ca3096551b9.jpeg" alt="img_1695"><br><a href="https://weex-project.io/references/common-style.html">Read more about gradient</a>.</p>
+</li>
+<li>Pseudo class<br>Currently, Weex supports 4 pseudo classes:<code>active</code>, <code>focus</code>, <code>disabled</code>, <code>enabled</code>. </li>
+</ul>
+</li>
+<li><p>New BroadcastChannel API<br>Developers can use <code>BroadcastChannel</code> API to implement inter-instance communication.   </p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">const</span> Stack = <span class="keyword">new</span> BroadcastChannel(<span class="string">'Avengers'</span>)</div><div class="line">Stack.onmessage = <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(event.data) <span class="comment">// in this case, it's "Hulk Smash !!!"</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// in another instance</span></div><div class="line"><span class="keyword">const</span> Hulk = <span class="keyword">new</span> BroadcastChannel(<span class="string">'Avengers'</span>)</div><div class="line">Hulk.postMessage(<span class="string">"Hulk Smash !!!"</span>)</div></pre></td></tr></table></figure>
+</li>
+<li><p>Image’s <code>onload</code> event add <a href="https://weex-project.io/references/components/image.html"><code>naturalHeight</code> and <code>naturalWidthimage</code></a> to get the original size of image file.</p>
+</li>
+<li>Websocket Support<br>WebSockets is an advanced technology that makes it possible to open an interactive communication session between the user’s h5/iOS/android and a server. With this API, you can send messages to a server and receive event-driven responses without having to poll the server for a reply.<br><a href="https://weex-project.io/cn/references/modules/websocket.html">Read more about Weex’s websocket.</a></li>
+<li>Support synchronous method call<br>Both module and component method can defined synchronous method exposed to JS runtime now. Means native will invoke these method in JS thread directly.</li>
+<li><p>Support <code>viewport</code> configuration<br>Similar to <a href="https://drafts.csswg.org/css-device-adapt/#viewport-meta" target="_blank" rel="external">W3C specification</a>, Weex support set define <code>viewport</code> in script tag:   </p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"config"</span>&gt;</span><span class="javascript"></span></div><div class="line">  &#123;</div><div class="line">    <span class="string">"viewport"</span>: &#123;</div><div class="line">        <span class="string">"width"</span>: <span class="string">"device-width"</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>Tools   </p>
+<ul>
+<li><a href="https://github.com/weexteam/weex-devtool" target="_blank" rel="external">Devtools</a><ul>
+<li>Support Vue 2.0 debugging.  </li>
+<li>Add network switch for network inspector.</li>
+<li>Make application capable to decide which bundle is ‘un-debuggable’, which means page’s source code is unreadable in debug mode.</li>
+</ul>
+</li>
+<li><a href="https://github.com/weexteam/weex-pack" target="_blank" rel="external">Weexpack</a><ul>
+<li>Has full set of commands for developers to setup android/ios application with his .we/.vue files.</li>
+<li>Developers could easily pack/install his application with simple command.</li>
+<li>Has full set of commands for developers to manage weex plugins, including create plugin template, add plugin to his project etc.</li>
+<li><a href="http://market.weex-project.io" target="_blank" rel="external">Plugin market</a> was formally used for developers to publish/download weex plugins.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Bugfix<ul>
+<li>* [android] add fixed size property 5191241</li>
+<li>* [android] bug fix NPE &amp;&amp; cache ScreenWidth and ScreenHeight 950e843</li>
+<li>* [android] bugfix duplicate destroy 25412e0</li>
+<li>* [android] bugfix keyboard force hide (#106) 0ad2f95</li>
+<li>* [android] bugfix scroller offset transform twice cd7ad66</li>
+<li>* [android] change gradle to fix build 1feaadf</li>
+<li>* [android] ClipPath doesn’t work when the following conditions met   1. rotation or scale is used   2. API level is 24 As border-radius uses clipPath, this will cause views with border-radius using rotation or scale on API level 24 doesn’t. So far, this is a bug of Android N,<a href="https://code.google.com/p/android/issues/detail?id=225556&amp;sort=-id&amp;colspec=ID" target="_blank" rel="external">https://code.google.com/p/android/issues/detail?id=225556&amp;sort=-id&amp;colspec=ID</a> f69e918</li>
+<li>* [android] Fix bug of border width due to viewport. Refer <a href="https://github.com/sospartan/weex/commit/7cfe9752e0c95f3b23bedfa3f51ba3bafb4318f4#diff-42908d45812780fec8606537dffab67dL1054" target="_blank" rel="external">https://github.com/sospartan/weex/commit/7cfe9752e0c95f3b23bedfa3f51ba3bafb4318f4#diff-42908d45812780fec8606537dffab67dL1054</a> 9cd6800</li>
+<li>* [android] fix cast exception 3136fcf</li>
+<li>* [android] fix DCL thread safely (#48) 62e9b71</li>
+<li>* [android] fix duplicate add component child to list 3fd73d7</li>
+<li>* [android] fix find component 45643ab</li>
+<li>* [android] fix getScreenWidth with context parameter (#80) 16377f2</li>
+<li>* [android] fix inefficient use of keySet iterator instead of entrySet iterator (#47) dac80e2</li>
+<li>* [android] fix intrinsicSize when img.resize=contain b6272a2</li>
+<li>* [android] fix npe in onScrollerListener (#138) 8141de7</li>
+<li>* [android] fix npe in stream callback 24aa2c2</li>
+<li>* [android] fix PageActivity duplicate add view to container 06f77b8</li>
+<li>* [android] fix refresh crash after destoryed (#144) 51ea00b</li>
+<li>* [android] fix refresh/loading a726d3c</li>
+<li>* [android] fix slider auto scroll behavior 28926ba</li>
+<li>* [android] fix slider layout, ignore position offset. a0381e4</li>
+<li>* [android] fix some weak code that may cause file leak or useless (#49) 8d0f049</li>
+<li>* [android] fix stackoverflow 6a01059</li>
+<li>* [android] fix stream response status type (#63) 8580c66</li>
+<li>* [android] fix switch case (#127) c301b92</li>
+<li>* [android] fix textarea vertical gravity 9730948</li>
+<li>* [android] fix the IllegalArgumentException on empty arguments f799d67</li>
+<li>* [android] fix the wrong header location (#135) d58fce9</li>
+<li>* [android] fix typo: WebSocket -&gt; webSocket c162d54</li>
+<li>* [android] fix wrong initial direction value on appear event (#107) 593c799</li>
+<li>* [android] modify default real position (+1 squashed commit) Squashed commits: [9470835] * [android] fix unittest b915584</li>
+<li>* [android] move indicator layout logic to subclass;seperate fixed layout logic fc2a009</li>
+<li>* [android] rename debug activity 95ab73a</li>
+<li>* [android] update fix do not remove loading and fresh ddf74ff</li>
+<li>* [html5] fix border &amp; border-width for less than 1px. (#2059) 3eb34b9</li>
+<li>* [html5] fix bugs of neighbor 34fafb2</li>
+<li>* [html5] fix compatibility problem &amp; support deps arguments. 00e7079</li>
+<li>* [html5] fix content-type error 5b06140</li>
+<li>* [html5] fix h5 build 56e9c03</li>
+<li>* [html5] fix shrink &amp; grow for flex. (#2082) b5b600d</li>
+<li>* [html5] fix slider container’s style. (#2157) a79bd9c</li>
+<li>* [html5] fix uncaught dom exception for video.play. (#1877) 7a0bd03</li>
+<li>* [html5] fixbug:change name from WebSocket to webSocket] (#2146) b72bbb9</li>
+<li>* [ios]  bug fix: websocket module name is changed , playground should change 3f35b82</li>
+<li>* [ios] bug fix: onload success value type is not same as android, change it for unify 531633c</li>
+<li>* [ios] bugfix call renderFinish 1fb2e0a</li>
+<li>* [ios] bugfix module default method not called 0be9f87</li>
+<li>* [ios] bugfix moduleEvent compatible dbea448</li>
+<li>* [ios] bugfix multi input or textarea maybe wrongly change root view frame a2e97db</li>
+<li>* [ios] bugfix navigation pop animated value convert cfe98a8</li>
+<li>* [ios] bugfix navigator open and close. beef00b</li>
+<li>* [ios] bugfix rootView information  coordinate 7313703</li>
+<li>* [ios] bugfix slider-neighbor may beyond item count index cbfa9df</li>
+<li>* [ios] bugfix view event 83d3e6a</li>
+<li>* [ios] bugfix: playground cannot open c949463</li>
+<li>* [ios] bugfix:delete configpicker not delete the method in header cc3afc2</li>
+<li>* [ios] fix : Change the lastoffsetXRatio to lastOffsetXRatio de8f246</li>
+<li>* [ios] fix : Change the parameter wording to make it more in line with development habits. 869da54</li>
+<li>* [ios] fix : if _fontFamily is nil set _fontFamily value with the correct system font. In the case of Chinese characters, this logic help system select the right system default font name. 6e202b6</li>
+<li>* [ios] fix : improve slider-neighbor demo code .remove useless <container> label and <scroller> label. 2c236c8</scroller></container></li>
+<li>* [ios] fix bug : you can’t slide to the right when the slider has only two pages. d224bfb</li>
+<li>* [ios] fix bug that border-x-radius not work 96ba5b5</li>
+<li>* [ios] fix bug that horizontalpan and verticalpan can not trigger simultaneously eb03cb0</li>
+<li>* [ios] fix bug: text input padding is not right f4accba</li>
+<li>* [ios] fix crash after returning id type, need to copy here. 4f5276b</li>
+<li>* [ios] fix issue that cells pushed down by inserted cells will not trigger disappear event. 9dcc4dd</li>
+<li>* [ios] fix issue that rotate 90-&gt;180-&gt;270 not work. 5b3c13d</li>
+<li>* [ios] fix issue that rotate(0) not work after rotate(&gt;180degree) 0f6989d</li>
+<li>* [ios] fix issue that there will be 1px space remaining between list’s top and navigator when UITableView is pulled down and finger releases. d286e3c</li>
+<li>* [ios] fix typo in [WXSDKEngine initSDKEnvironment] 17a093f</li>
+<li>* [ios] fix variable name spelling error becd631</li>
+<li>* [ios] Fixed :Merge remote-tracking branch ‘alibaba/ios-feature-20170118’ into ios-feature-20170118-new-slider-neighbor-fix    move “sliderview init” code to loadview method. 141fd9d</li>
+<li>* [ios] fixed component’s view should be removed separately since its view is a subview of rootview. f9b2378</li>
+<li>* [ios] fixed issues that horizontal/vertical pan not respond while recyling views. c7b4bec</li>
+<li>* [ios] js service bug fixed c068bd7</li>
+<li>* [ios] removed debug code and fixed bug 548984f</li>
+<li>* [ios] update navigator module, add open and close interface. f65c42f</li>
+<li>* [ios] upgrade JSFM to 0.19.3 to fix callback problem 9ab9b92</li>
+<li>* [jsfm] fix mismatch of weex.require and weex.document ad63f2a</li>
+<li>* [jsfm] fix support native method bug ce26a6f</li>
+<li>* [jsfm] fixed Promies bug in android 17282c2</li>
+</ul>
+</li>
+</ul>
+<h3 id="Downloads"><a href="#Downloads" class="headerlink" title="Downloads"></a>Downloads</h3><ul>
+<li><a href="https://github.com/alibaba/weex/archive/v0.10.0.zip" target="_blank" rel="external">Source code (zip)</a></li>
+<li><a href="https://github.com/alibaba/weex/archive/v0.10.0.tar.gz" target="_blank" rel="external">Source code (tar.gz)</a></li>
+<li><a href="https://cocoapods.org/pods/WeexSDK" target="_blank" rel="external">Cocoapods WeexSDK</a></li>
+<li><a href="https://bintray.com/alibabaweex/maven/weex_sdk" target="_blank" rel="external">Bintray weex_sdk</a></li>
+</ul>
+<h2 id="v0-9-4"><a href="#v0-9-4" class="headerlink" title="v0.9.4"></a>v0.9.4</h2><hr>
+<ul>
+<li><p>New features</p>
+<ul>
+<li><p>SDK</p>
+<ul>
+<li><p>New API to get Component’s size and position:<br>Now you can get these data through <code>getComponentRect</code>:   </p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> dom = <span class="built_in">require</span>(<span class="string">'@weex-module/dom'</span>);</div><div class="line">dom.getComponentRect(<span class="keyword">this</span>.$el(<span class="string">'comp_id'</span>), <span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</div><div class="line">  <span class="keyword">if</span>(data.result)</div><div class="line">    <span class="built_in">console</span>.log(data);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>The <code>data</code> callback parameter contains a <code>result</code> to tell if operation is success. And <code>size</code> tell you the true data(<code>bottom</code>/<code>top</code>/<code>left</code>/<code>right</code>/<code>width</code>/<code>height</code>) of component.</p>
+</li>
+<li>A brand new <code>picker</code> module. We have ‘single-picker’,’date-picker’ and ‘time-picker’ currently, and more common pickers are on the way.<br><img src="https://cloud.githubusercontent.com/assets/115201/21414801/e6341b36-c83d-11e6-9e5a-3acdabb592ee.png" alt="img_1282"><br>There are two ways to use <code>picker</code></li>
+<li><p>Use <code>picker</code> module directly:</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> picker = <span class="built_in">require</span>(<span class="string">'@weex-module/picker'</span>);</div><div class="line"><span class="keyword">var</span> self = <span class="keyword">this</span>;</div><div class="line">picker.pickDate(&#123;</div><div class="line">    <span class="string">'value'</span>:<span class="string">'2016-11-28'</span>,</div><div class="line">    <span class="string">'max'</span>:<span class="string">'2029-11-28'</span>,</div><div class="line">    <span class="string">'min'</span>:<span class="string">'2015-11-28'</span></div><div class="line">&#125;,<span class="function"><span class="keyword">function</span> (<span class="params">ret</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> result = ret.result;</div><div class="line">    <span class="keyword">if</span>(result == <span class="string">'success'</span>)</div><div class="line">    &#123;</div><div class="line">        self.value = ret.data;</div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+</li>
+<li><p><code>input</code> component also add ‘date’ and ‘time<code>type to work with</code>picker` module internally:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span></span></div><div class="line">  <span class="attr">type</span>=<span class="string">"date"</span></div><div class="line">  <span class="attr">placeholder</span>=<span class="string">"select date"</span></div><div class="line">  <span class="attr">class</span>=<span class="string">"input"</span></div><div class="line">  <span class="attr">autofocus</span>=<span class="string">"false"</span></div><div class="line">  <span class="attr">value</span>=<span class="string">""</span></div><div class="line">  <span class="attr">onchange</span>=<span class="string">"onchange"</span></div><div class="line">  <span class="attr">max</span> = <span class="string">"2029-11-28"</span></div><div class="line">  <span class="attr">min</span> = <span class="string">"2015-11-28"</span></div><div class="line">          &gt;<span class="tag">&lt;/<span class="name">input</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>Support animation with <code>width</code> and <code>height</code> property.</p>
+</li>
+<li>Support use empty value to reset css property to default value.</li>
+<li>Components can expose methods too, like modules do. Developers use the same way as create module method to achieve that.</li>
+<li>Add <code>blur</code> and <code>focus</code> method to manually control <code>input</code> component to lose or get focus.</li>
+<li>Support relative URL, which will resolve real URL by bundle’s URL.</li>
+<li>Core javascript framework’s unit test coverage is 100% now. we’ll pay more attention to quality.  </li>
+<li>DevTool<ul>
+<li>Support to check the node hierarchy in <a href="https://github.com/weexteam/weex-devtool-extension" target="_blank" rel="external">weex-devtool-extension</a> and highlight the node if it exceeds an specified level.</li>
+<li>Support different refresh mode in devtools to reload the page or SDK automatically when source file updated.</li>
+<li>Improve quality in <a href="https://github.com/weexteam/weex-devtools-android" target="_blank" rel="external">weex-devtools-android</a> module<ul>
+<li>Remove explicit dependency on okhttp and okhttp3 by reflection and proxy</li>
+<li>Improve demo application with less and refactored code</li>
+<li>Fix some crash caused by class up cast</li>
+<li>Fix reflection crash caused by complier optimization</li>
+<li>Fix “network on main thread” and stop screencast when disconnect</li>
+</ul>
+</li>
+<li>Add <a href="https://github.com/weexteam/weex-analyzer-android" target="_blank" rel="external">weex-analyzer-android</a> and <a href="https://github.com/weexteam/weex-analyzer-ios" target="_blank" rel="external">weex-analyzer-ios</a> which support the following on device directly:<ul>
+<li>Inspect FPS/CPU/memory</li>
+<li>Inspect storage</li>
+<li>Display log information</li>
+<li>3D viewer of the weex page</li>
+<li>Javascript error prompt</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Bugfix</li>
+<li>* [android] bug fix slider (#56) 29b9d29f5acd9677a64316b94d5c95f8c7f1a837</li>
+<li>* [android] bugfix duplicate destroy 0a59a85467671ddb982fbea6def810e6fa415137</li>
+<li>* [android] bugfix scroller offset transform twice 1db300d470951f543236e0b605d7b5a974b96430</li>
+<li>* [android] fix appear event not trigger at first 85085a394dd2bae5e397b889c01c1e1a3b8e6b46</li>
+<li>* [android] fix build 46bcf4298cd74c1d9706255143f95e0299ebdd15</li>
+<li>* [android] fix callback parameter 16db52ed031f7182f2159bc18c0c6e20e7c907f7</li>
+<li>* [android] fix dialog window leaked (#55) 4c478044355d6d552fb2f72935cd93867e5f0802</li>
+<li>* [android] fix different behavior with iOS switch (#43) 7708a6680e51ae6af9351724940778ce953538ed</li>
+<li>* [android] fix dynamic inserted header not sticky display 83c06383aa513061d144ec448ce0ccc25bde5484</li>
+<li>* [android] fix fireevent change key 9fb7d0f25d6b1bfe54fb63c9b73c53f8c927e4ad</li>
+<li>* [android] fix flash when render video tag a53e6b80b8fa67cce85307a2e5e93d9fb6c28784</li>
+<li>* [android] fix list not lazy 0be12be1194bea0c624791662e9f38aac4f0c3fd</li>
+<li>* [android] fix methods generate external-loader-component ec6d4136a29c1626470d3bbba90db3d9916c374e</li>
+<li>* [android] fix move child from index to index b within the same parent 72259e7a5734ed9a595de080d05ea8e1bf1e716e</li>
+<li>* [android] fix slider auto scroll a8d74031dbd526201c05433a08c8aac2047b7a66</li>
+<li>* [android] fix slider auto scroll after activity resume bba3bdea45bfb4030b10ea9a847a77463d1ab20a</li>
+<li>* [android] fix slider auto scroll after activity resume e0d5e79fc29e07b734d892073effc041a39c85c6</li>
+<li>* [android] fix stackoverflow in slider c1f1d702110f49ead4005fae50e4e63c5e72cfac</li>
+<li>* [android] fix sticky not display when scrolltoelement 22d163cb572e6b1c510c350a692a4265eb27e204</li>
+<li>* [android] fix test d756db8b4c26f8610076a13a0980d024a4e734ac</li>
+<li>* [android] fix textarea content vertical gravity eecc32c0a72ce82aa4e998cabb31308fc737fe95</li>
+<li>* [android] fix the invalid index of slider-neighbor (#62) 59fd5742a23908174de12804b1a0992d89663afd</li>
+<li>* [android] fix unittest 0b2a3778dfa39f17ae6346168b55a3418d85aa1b</li>
+<li>* [android] fix unittest 0d2bd982507820f5840e99ee12cd351ae6eb18e5</li>
+<li>* [android] fix unittest 4f120b6dbcb4433c8c320c310cd4de051163780c</li>
+<li>* [android] fix unittest 6129cd2ed06ce7acc0366b4c172bdf199d52e997</li>
+<li>* [android] fix wrong behavior with slider.index (cherry picked from commit c59ae39) 3028f32278a47603d1dc9f0f4314b44721069ac4</li>
+<li>* [android] fix wrong behavior with slider.index c59ae3977837be238b08b69388aec12eb4817716</li>
+<li>* [android] move element  bug fix dfc643df7fb100737c98efa7f5932e75d07ca59f</li>
+<li>* [android] move element  bug fix f28fbdd3ac57c157f52d82fa9473e8651b88023b</li>
+<li>* [android] NPE fix ee67a26c045cc351d317e805712bd6e50c4213cb</li>
+<li>* [android] Parent’s “append=tree” will prevent child’s transform style, this commit fix it by add the whole dom tree to animation set instead of the root dom. * 626915b34bfb348947709c23e09a3dac7acd6962</li>
+<li>* [android] slider: fix the IllegalStateException (#58) 0e94762e1ebc240a5e8be6c131848b57bb48b1ea</li>
+<li>* [android] v8 security bug fix 7a8f14b78753fd02d59b126fffbd52996376ecc3</li>
+<li>* [html5] fix the conflict ac845591a65501c4eae70471502d8370f9983130</li>
+<li>* [html5] fix wwp config 0a2420a7202887a0222c0294c510267f139858c8</li>
+<li>* [html5] fixed lazyLoad filename 4119190c6b093f87bcb8ebd00f23bd939c307ad1</li>
+<li>* [html5] fixed rollup build 03f241ce3c7d8ac786b632f80aa22b94fdc00d34</li>
+<li>* [ios] 1. fix refresh location 2. cancel playground re-checkupdate 69f43da52ab22c7777d54bc2d9f45e95eb1d437f</li>
+<li>* [ios] bug fix 1664, add resetLoadmore on scroller &amp; list. 4efe8662912ec5a8ce5fac8e09c2e061a21056a4</li>
+<li>* [ios] bug fix picker 2d979a58c4b37e93dda5b775d79a7a1ea2165c22</li>
+<li>* [ios] bug fix picker 983fe0069ff670b92b6fa7e3e6e29c5b2c768762</li>
+<li>* [ios] bug fix picker rescue 27fe3f23bb63072b766f75b69351464d163b331a</li>
+<li>* [ios] bug fix setNeedsLayout in every elements. not in once. because elements not contain css node only edd47e09ff453a26c7b176279d0ab84454d4914a</li>
+<li>* [ios] bug fix update code style 05b2959be0e0c35ad31b5b20b77f86f296786da2</li>
+<li>* [ios] bug fix: change resetTextCSSNodes to resetTextCSSNode a782e092b175a0a34db7cfccb74b5f157ddb3fd4</li>
+<li>* [ios] bug fix: refresh view layout error. b0c4a403b1e1dc8aa500c60efcef263b6f7fdd6f</li>
+<li>* [ios] bug fix:slider does not remove items  synchronously when item view has been remove from superview. f60997fc3fe7bcfd220e159d61dbaae438e59131</li>
+<li>* [ios] bugfix add register component type f7e72ea289ce5f909fb9f6b61705e4f4b9930c53</li>
+<li>* [ios] bugfix cancel url uft8-encode 6b67a9e8a3f62849709d552bea0d947679164041</li>
+<li>* [ios] bugfix cancel url uft8-encode 9a43cfc9ecb9683562560a880d0f026fd28e93ea</li>
+<li>* [ios] bugfix component load rewriteurl f92a6d70e0f3db1eb14c4d90c7e30609e5175dff</li>
+<li>* [ios] bugfix globalEvent removeObserver don’t need specify target a5420939bac4e21ef61b15710e2fa5e205403d96</li>
+<li>* [ios] bugfix iconfont load font , support woff 4c5d5812cb145d60270c5e59ae29def9be8fdcf3</li>
+<li>* [ios] cancel animation while handle input keyboard and fix bug when there are many input in a page 61f9259bf77c59916d3dbcdf62b12cd0161698b4</li>
+<li>* [ios] debug performance ae3d30802681990e79ce06fb4229b74f3c1d99c2</li>
+<li>* [ios] fix #1192, #FFF display error in iOS 5df5cd3739e79ec6e2fefbff66ba7ba2a411d637</li>
+<li>* [ios] fix #1479, add handler for slider’s items count less than or equal to 2 d654ed7d926c2e20b3a34315348a87470171cdd1</li>
+<li>* [ios] fix : Compatible non-standard url (“//a.b.example.png”) 3da33595d6e1a261b1c761811d1d8f7672ba3db5</li>
+<li>* [ios] fix border’s “Overlapping Curves” not recomputed when relayout d302adf14568a32d2b635a64d1326172d9590893</li>
+<li>* [ios] fix bug datepicker no update and crash eef4483b3176a0f2e18673e26068a6ec53fef5ca</li>
+<li>* [ios] fix bug debugTool unload 751b752f72690954c49ffaf8b89702a0f93712f2</li>
+<li>* [ios] fix bug default style f8f056e9f067b4ce23731cb3114383705a5926ac</li>
+<li>* [ios] fix bug height change to zero when style change 1ed428dda5d1b4e2b360f216b1b96433479dad28</li>
+<li>* [ios] fix bug height change to zero when style change a4d7ebea5e288b753ee71571b149130149768c6b</li>
+<li>* [ios] fix bug height change to zero when style change aac7c013003c055e840674e5f61dba4d5073dd73</li>
+<li>* [ios] fix bug height change to zero when style change bb8cdb1f2f7ff6ad9b8ac4de23323ca9dea7e0d9</li>
+<li>* [ios] fix bug that setFrame incorrectly when transform has been set 84dfd4c7395ae728356b660a0b605c7b85353973</li>
+<li>* [ios] fix bug that sticky component’s absolutePosition will be computed twice if the actual absolute position is {0,0} a780352d0a1a139ce3e276404d03bd3f9e2e6fd6</li>
+<li>* [ios] fix bug: text area cursor auto go to end .reason: if attributes[@”value”] is exist. _updateAttributesOnMainThread will change textview text.the cursor go to end. * solution: save the  textview  selectedRange , when set textview.text ,correct it d22836ef559809f566068bfe47be960a6d2e9faa</li>
+<li>* [ios] fix bug:_updateAttributesOnComponentThread reset styles delete 7c993d1952551ccfad2ad22f01ffa40ea9d12245</li>
+<li>* [ios] fix bundlejs 616f4653925c801406ca5fc80fd5f890c45c2b19</li>
+<li>* [ios] fix code style 31b08adf525559d9ce46f25eab349584d2f621a9</li>
+<li>* [ios] fix compiler complain about warning b92e471c1195f40f8167c8253ea0a909930a9880</li>
+<li>* [ios] fix componentRect infomation da08628c562dded860fe1558fb9dc187530223c9</li>
+<li>* [ios] fix componentSize to get 41af993f1ffd4e041083a0150607040b9e7cdef2</li>
+<li>* [ios] fix crash 55f69b502f0ff1f997dbfbe5238e35a4f123bc5b</li>
+<li>* [ios] fix crash on events’ copy 491df3dca1fd47c1c564823c7f46527bf064c2dc</li>
+<li>* [ios] fix datepicker bug when no value can not pop right picker 24441ad6273e6093a9919b2699a4333b9d7147df</li>
+<li>* [ios] fix datepicker complie error 3bf2a0753cf47170144939d42173a668b22e27f5</li>
+<li>* [ios] fix datepicker complie error a362ef85918551bacac762ee660300e3108c1c5a</li>
+<li>* [ios] fix deprecated method of textarea 4d24f3ff7e792a1c97aa7ee31fbc7f0899c21efb</li>
+<li>* [ios] fix failed tests. b5210b244f2f2331be01c9afc4a8cde5b32ed0ee</li>
+<li>* [ios] fix input bind each other feb1e7c1ce959491fefed808e46e6291203ccbd7</li>
+<li>* [ios] fix ios7 crash f02eff33acab4a58a1a8d6e4d84cef44dcf09bf4</li>
+<li>* [ios] fix issue about WXConvert ‘s UIColor method add193b643c980e310866498dc081130ee287373</li>
+<li>* [ios] fix issue that iOS 7 will crash while alert still alive but instance has been destroyed 160a2dae54d6e656c980b9d008b15b0dc28aa4e1</li>
+<li>* [ios] fix issue that onappear/ondisappreat not work if binding to cell component. 63f6d7507731d2004e996f99bf859c228fc8b651</li>
+<li>* [ios] fix multi keyboard notification 684d3955de263cb39f8afc42c6ffa7340674c81a</li>
+<li>* [ios] fix navigator parameter b3117a9c482fb5491b5206413fa7607c356cf95a</li>
+<li>* [ios] fix override bundleUrl d7729716aea6652d325e4282ad6b42aaaf14f82c</li>
+<li>* [ios] fix playground Podfile   remove c header file  include in WXUtility.h e299feaf4076a5bf7140335ac6cc70d9d99a01da</li>
+<li>* [ios] fix responderToSelector target b0f550d6b94da6d9764863b328edfba6d730a75b</li>
+<li>* [ios] fix rootComponent order 999c59da3a1dc6c91f036b938c9963cc3cfe87c4</li>
+<li>* [ios] fix set navigator callback msg a30b7ed4978de3c91448a1c944431f19e942b515</li>
+<li>* [ios] fix single picker but 969d4212967c084a3477e3877052af224354f0e4</li>
+<li>* [ios] fix stream jsonp bug b018343b71eb7289bde326acf2f2fe1b124cfad8</li>
+<li>* [ios] fix testComponentFactory 99574bf0a1072dbfba547d74545783891b15cdff</li>
+<li>* [ios] fix tests compile error 461c24401e5fa1c37f9af25db35665f9f6b4a8da</li>
+<li>* [ios] fix text line-height and text-align conflict b1a0673020b7a271fb540ae723ca481aa18db7b4</li>
+<li>* [ios] fix textinput component inputEvent fired repetitiously 5c8242776f1410771a357735d6ae2a5b261b7d20</li>
+<li>* [ios] fix warning b8464248f61ad3ed9570730608e563f9c73e8ae6</li>
+<li>* [ios] fix warnning e2533d036daad60345284f276949dec06b5e0db9</li>
+<li>* [ios] fix when options is nil and then  bundleUrl will be nil 5f71a1a2eb7442cf63d9732a6a2b3e2cb3765fa1</li>
+<li>* [ios] fix WXSDKInstance rootview bug 3b08a516ff788ca116329dc863ffcb9f66979881</li>
+<li>* [ios] texture bug fix : when input change . the text content send to change a38f1b2b8e05e149f09ffbb986268339a9042691</li>
+<li>* [jsfm] fix #1447, fix binding event bug of components which have repeat attribute 421cc439d1b8b5abbdbba58882f6c39fd8f862c9</li>
+<li>* [jsfm] fix build 8162124f72caf9360657ebc5a2750554d36f3659</li>
+<li>* [jsfm] fix condition judgment bug in insertBefore &amp; insertAfter 9c182af615e0e597e21a44217a511126333499e9</li>
+<li>* [jsfm] fix eslint c0db1807d080a26c7344f4cc57e5834e98b06085</li>
+<li>* [jsfm] fix eslint f75cbe955dc0bcdf33a608af82ab18d3290b87c3</li>
+<li>* [jsfm] fix format for lint 5faa860804c1d9adb719a450b53da165ec523e83</li>
+<li>* [jsfm] fix the npm run build d3e5124add2dd6a42b1209fe11a8dc58cd536487</li>
+<li>* [jsfm] fixed #1818 a757deb7235792c2dd11684500651f717f43226a</li>
+<li>* [jsfm] fixed all cases for default framework (black-box) c842ef884e45c568f9ae55e67a066a5de2de15ed</li>
+<li>* [jsfm] fixed all test scripts 95ba6a1d6c4211d62d7d2a6693c8aa1e5b7d9607</li>
+<li>* [jsfm] fixed all unit test for new file structure d4eb5c97daa34dc53dd929eaf736dcf22e8873b6</li>
+<li>* [jsfm] fixed browser render file structure ba7a40bca9a5759101e821c4e043e437b848dcde</li>
+<li>* [jsfm] fixed deps error 555ded73f6c6ecb5a9c110f34ab34e596c1c36eb</li>
+<li>* [jsfm] fixed html5 render for Vue 980d952d71903545a0bfa7115dfeacd8c7c71ae5</li>
+<li>* [jsfm] fixed lint and added case test a3e20a8c78feda705b853f2036cc17bd256f7bb8</li>
+<li>* [jsfm] fixed rollup config 4a1c208cf33fb3e5649f8116133f97b003e78127</li>
+<li>* [jsfm] fixed runtime instance map management b6e94fa1d54bfdc541ae7c48d98f4dc01481660f</li>
+<li>* [jsfm] fixed some vue examples ca2a9c57365a67c9215f69c438c86440a28704ce</li>
+<li>* [jsfm] fixed some vue examples da21405b7fab3228bda0e0b2a74853a05c5eb69a</li>
+<li>* [jsfm] fixed url checker in vue example 679dc1cffbd0413b9b81624ac46f61473cdf756d</li>
+<li>* [jsfm] removed timer bug case and replaced to slot bug case b6f2c8390e3a97df948fc8d2699d15eb62582625</li>
+</ul>
+<h3 id="Downloads-1"><a href="#Downloads-1" class="headerlink" title="Downloads"></a>Downloads</h3><ul>
+<li><a href="https://github.com/alibaba/weex/archive/v0.9.4.zip" target="_blank" rel="external">Source code (zip)</a></li>
+<li><a href="https://github.com/alibaba/weex/archive/v0.9.4.tar.gz" target="_blank" rel="external">Source code (tar.gz)</a></li>
+<li><a href="https://cocoapods.org/pods/WeexSDK" target="_blank" rel="external">Cocoapods WeexSDK</a></li>
+<li><a href="https://bintray.com/alibabaweex/maven/weex_sdk" target="_blank" rel="external">Bintray weex_sdk</a></li>
+</ul>
+<h2 id="v0-8-0"><a href="#v0-8-0" class="headerlink" title="v0.8.0"></a>v0.8.0</h2><hr>
+<ul>
+<li>New Features<ul>
+<li>Add <a href="https://github.com/alibaba/weex/blob/doc/doc/modules/globalevent.md" target="_blank" rel="external">globalEvent module</a></li>
+<li>Support <code>width/height</code> animation in transition</li>
+<li>Refactor the default js framework code, hide almost all the private APIs #777</li>
+<li>iOS 10 compatibility</li>
+</ul>
+</li>
+<li>Performance<ul>
+<li>Support <code>callAddElement</code> low-level API to make rendering faster</li>
+<li>Improve SDK initialization performance, for minimise invoke thread impact.</li>
+<li>Use native <code>Set</code> polyfill to fix iOS7 memory leak</li>
+<li>Use <code>setProperty</code> replace reflection for better performance</li>
+<li>Add <code>static</code> directive in default js framework to avoid unnecessary data-binding and take down the memory use</li>
+</ul>
+</li>
+<li>Tools<ul>
+<li>Add <a href="https://github.com/weexteam/weex-pack" target="_blank" rel="external">weex-pack</a>, our next generation of engineering development kits. It allows developers to create weex projects with simple commands and run the project on different development platforms.</li>
+<li>Add <a href="https://github.com/weexteam/weex-devtool-extension" target="_blank" rel="external">weex-devtool-extension</a>, a extension for Weex devtool to improve your debug experience，which equivalent an element tag for debugger page.</li>
+<li>Move devtool to separate <a href="https://github.com/weexteam/weex-devtool-iOS" target="_blank" rel="external">iOS</a> and <a href="https://github.com/weexteam/weex_devtools_android" target="_blank" rel="external">Android</a> repos.<ul>
+<li>Add “screencast” which enable the screen of the device(or monitor) to appear on the “Inspector” page; </li>
+<li>Add “remote control” function, in Android user could control remote device(or monitor) when he moves mouse on screencast; </li>
+<li>Add “select element” function which enable the user to find the exact node in “Elements” inspector Tab when he click the mouse on screencast;  </li>
+<li>Add “vdom inspector”, so user can choose to see the details of native dom or vdom in “Elements” Tab at his preference; </li>
+<li>Adjust interfaces with weex SDK to support “callAddElement”; </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Bugfix<ul>
+<li>[jsfm] fix the bug of Dep.target 3448104</li>
+<li>[jsfm] fix the test of clearCommonModules 4be9291</li>
+<li>[jsfm] fix bug for clear common modules (pr #1097) d2f8c4d</li>
+<li>[jsfm] fix callAddElement callback -1 e421b41</li>
+<li>[jsfm] fix #1237, fix binding event bug of components which have repeat attribute bfed029</li>
+<li>[jsfm] fix bug af99cc1</li>
+<li>[jsfm] fixed &amp; closed #1148 4209850</li>
+<li>[jsfm] fix merge classStyle fail between nested components 91c5cc6</li>
+<li>[jsfm] fix watcher dismatched bug between multi instance 900305d</li>
+<li>[jsfm] fixed _Set bug 51b219b</li>
+<li>[jsfm] fixed memory management bug in dom event handler in document 9024bda</li>
+<li>[jsfm] fixed Promise polyfill problem in iOS 7-8 9a61f33</li>
+<li>[android] fix #1380, update method getOffsetAmount in WXCircleViewPager.java (#1382) fd74539</li>
+<li>[android] bug fix native crash d8671bd</li>
+<li>[android] fix editComponent set non-string value 2e2f032</li>
+<li>[android] destroyInstance bugfix 6628460</li>
+<li>[android] update fix global event Memory leak fc6d403</li>
+<li>[android] add callAddElement debug log 95e3680</li>
+<li>[android] bug fix classcast exception e399306</li>
+<li>[android] fix circle ci 51d3294</li>
+<li>[android] fix slider start auto scroll after activity resume. 89bae89</li>
+<li>[android] fix log util implementation 10d508f</li>
+<li>[android] fix x86 so file size verification 21d5135</li>
+<li>[android] fix build b1fc231</li>
+<li>[android] fix log utility 530fe51</li>
+<li>[android] NPE bugfix 6d4385f</li>
+<li>[android] add cuurentRef to avoid reused bug d836725</li>
+<li>[android] bug fix update the ref when cell reused 1f7bf86</li>
+<li>[android] bug fix update the ref when cell reused cef277f</li>
+<li>[android] fix usertrack modify 8732d70</li>
+<li>[android] fix code format 936ebd5</li>
+<li>[android] bug fix- Loading layoutY ba0d34e</li>
+<li>[android] bug fix - Loading layoutY a8f3c95</li>
+<li>[android] bug fix - loading margin 7a3f1e0</li>
+<li>[android] fix Deprecated 6aa7da9</li>
+<li>[android] fix #1102 (#1103) 5aea5c6</li>
+<li>[android] fix merge problem 7923b1e</li>
+<li>[android] fix typo 1de6800</li>
+<li>[android] fix scroller&amp;list appearance event da1ee4d</li>
+<li>[android] fix invaild add dom operation 14b5943</li>
+<li>[android] fix build 0d43794</li>
+<li>[android] fix build 0520743</li>
+<li>[android] fix build 9d596c1</li>
+<li>[android] fix list appear&amp;disappear 425c3e1</li>
+<li>[android] fix list appear&amp;disappear event 40b52f3</li>
+<li>[android] update so for fixing instanceId error 03d0973</li>
+<li>[android] fix v8 security problem 06dbc38</li>
+<li>[android] bugFix:  List component scrollTo inaccurate 45f0476</li>
+<li>[android] fixed #1058 f25238c</li>
+<li>[android] fixed #1058 33b4aaf</li>
+<li>[android] fix v8 security problem e0b881f</li>
+<li>[android] bugFix:  List component scrollTo inaccurate 052aeac</li>
+<li>[android] fix comment fd3e0ef</li>
+<li>[android] fix indicator default style 57b71fb</li>
+<li>[android] fix unit test ee74b5c</li>
+<li>[android] fix code style 449bad2</li>
+<li>[android] fix list  orientation usage, move component’s</li>
+<li>[android] fix change/focus confliction b672101</li>
+<li>[android] fix change/focus/blur  event confliction c3689e8</li>
+<li>[android] fix add dom error a993a84</li>
+<li>[android] update the mWXBridge to null when debugmode disable 35005ea</li>
+<li>[android] fix invaild add dom operation 7b1ad97</li>
+<li>[android] fix moveElement on the same parent dom case 2a94ba2</li>
+<li>[android] fix typo 42a2099</li>
+<li>[android] fix NPE c2da99e</li>
+<li>[ios] fix style line-height conflict with text-align e762637</li>
+<li>[ios] fix slider example href 8196792</li>
+<li>[ios] fix keyboard cover input sometime 0ad56dc</li>
+<li>[ios] fix #1188, support for converting string to NSUInteger. c3f6ea2</li>
+<li>[ios] fix issue that fixed-position component’s view be reallocated while it is in a cell. d8881c3</li>
+<li>[ios] indexDict must be accessed on component thread, fix componentForRef crash 8cc3503</li>
+<li>[ios] fix issue that transform-origin not works in rotation transform 5dcab9e</li>
+<li>[ios] fix warning f913dab</li>
+<li>[ios] fix css node children count invalid while change from or change to fixed position. 81a1dc4</li>
+<li>[ios] fix compile error 98a8078</li>
+<li>[ios] fix css node children count invalid while change from or change to fixed position. 0b3a2e3</li>
+<li>[ios] fix podspec syntax error d0386e6</li>
+<li>[ios] ios7 bugfix api 6e7cf07</li>
+<li>[ios] try to fix NSMapTable crash in iOS8 a03a4bc</li>
+<li>[ios] fix slider-neighbor bc03620</li>
+<li>[ios] fix remove Observer crash 46fcbc5</li>
+<li>[ios] fix issue that rotate transform not work in styles. 8601304</li>
+<li>[ios] fix layer setBackgroundColor crash 5778422</li>
+<li>[ios] fix sliderNeighbor 39cb4ea</li>
+<li>[ios] fix warning ea8c8f8</li>
+<li>[ios] fix warning 4d2528e</li>
+<li>[ios] fix warning issue d77fd5d</li>
+<li>[ios] fix issue transform does not work while initialized. c36f1bf</li>
+<li>[ios] canvas component property error fix 448d4f4</li>
+<li>[ios] try to fix textStorage thread-safe issue 0d62716</li>
+<li>[ios] fix A component onclick event 01f9706</li>
+<li>[ios] fix input disabled attribute bug 533df4f</li>
+<li>[ios] fix input disabled attribute bug fd2c526</li>
+<li>[ios] fix iconfont src update bug f99906b</li>
+<li>[ios] customize debug switch 86346ea</li>
+<li>[ios] fix typo ae99b92</li>
+<li>[ios] change context name for remove JSContext debugging 75c1e42</li>
+<li>[ios] fix input max length bug fe9a013</li>
+<li>[ios]add LogLevel control and RemoteDebug control 164abf8</li>
+<li>[ios] fix memory leak 00009c0</li>
+<li>[ios] fix a bug that re-deleting procedure 717bf3f</li>
+<li>[ios] fix storage module in swift f13b72f</li>
+<li>[ios] fix highlight problem 93eb282</li>
+<li>[html5] fix conflicts with jsfm 0.16 ce63e22</li>
+<li>[html5] fix lint 9612daa</li>
+<li>[html5] fix class name b224685</li>
+<li>[html5] fix img lazyload 3984111</li>
+<li>[html5] fix registration of tabheader d38a4c0</li>
+<li>[html5] fix bug of null rules of stylesheet in spinner c058f95</li>
+<li>[html5] fix top 41c603a</li>
+<li>[html5] fix toast a3a4730</li>
+<li>[html5] fix lazyload typo 493bee7</li>
+<li>[html5] fix lint 43b24da</li>
+<li>[html5] fix loadmoreoffset 3c7e262</li>
+<li>[html5] fix sticky 9bdf079</li>
+<li>[html5] fix lazyload 38ee957</li>
+<li>[html5] fix lint 0e94380</li>
+<li>[html5] fix flexible a06eb80</li>
+<li>[html5] fix jsonp callback error 6db0850</li>
+<li>[html5] fix typo 5f61a06</li>
+<li>[html5] fix lint 363decd</li>
+<li>[html5] fix bug of scroll to c007c86<br>orientation field to scroller 3febd83</li>
+<li>[html5] fix dist bug 9d102a5</li>
+<li>[html5] fix missing viewport meta. 1cf98e5</li>
+</ul>
+</li>
+</ul>
+<h3 id="Downloads-2"><a href="#Downloads-2" class="headerlink" title="Downloads"></a>Downloads</h3><ul>
+<li><a href="https://github.com/alibaba/weex/archive/v0.8.0.zip" target="_blank" rel="external">Source code (zip)</a></li>
+<li><a href="https://github.com/alibaba/weex/archive/v0.8.0.tar.gz" target="_blank" rel="external">Source code (tar.gz)</a></li>
+<li><a href="https://cocoapods.org/pods/WeexSDK" target="_blank" rel="external">Cocoapods WeexSDK</a></li>
+<li><a href="https://bintray.com/alibabaweex/maven/weex_sdk" target="_blank" rel="external">Bintray weex_sdk</a></li>
+</ul>
+<h2 id="v0-7-0"><a href="#v0-7-0" class="headerlink" title="v0.7.0"></a>v0.7.0</h2><hr>
+<ul>
+<li>New Features<ul>
+<li><a href="https://github.com/alibaba/weex/blob/doc/doc/modules/timer.md" target="_blank" rel="external">Timer Module</a></li>
+<li><a href="https://github.com/alibaba/weex/blob/dev/doc/modules/storage.md" target="_blank" rel="external">Storage Module</a></li>
+<li>Unify the <code>image</code> component’s error page when src is invalid</li>
+<li>Unify the <code>border</code>,<code>padding</code>,<code>background-color</code> style</li>
+<li>Horizontal-scroller support  <code>scrollto</code>  api</li>
+<li>Fix the issue that component with  <code>position:fixed</code> style can not be closed</li>
+<li>Module callback support <code>object</code> params</li>
+<li>Slider suppport  <code>setIndex</code> api</li>
+</ul>
+</li>
+<li>Performance<ul>
+<li>Use <code>callNative</code> signal to stop JSFM render after instance been destroyed</li>
+<li>Lazily initialize JSFM When device is in low-memory status, improve SDK stability</li>
+</ul>
+</li>
+<li><a href="http://alibaba.github.io/weex/doc/tools/devtools.html" target="_blank" rel="external">Tools</a><ul>
+<li>Support debugging  weex(.we) and  react(.jsx) source </li>
+<li>Support apps debugging on the same device </li>
+<li>Support “watch” feature</li>
+<li>Solve the dependency on Debugger, user could start “Inspector” first or “Debugger” at will</li>
+<li>Add “refresh” function in sdk, user could inspect new file by scanning its QR code in playground;</li>
+<li>Android/ios inspect module split from weex sdk,  and will deliver in separate repo in future; support inspect in windows system</li>
+</ul>
+</li>
+<li>Bugfix<ul>
+<li>[android] fix ‘fixed’ position not work when append tree 6ccfa4f</li>
+<li>[android] fix slider set index frzee 6524849</li>
+<li>[android] bug fix - setLayout LayoutParams b70f6e2</li>
+<li>[android] fix get header:compitable with lower case header key 5ebec75</li>
+<li>[android] fix storage module: keep open when module is live c311f15</li>
+<li>[android] fix build 0389302</li>
+<li>[android] fix jsonp response process 28588c6</li>
+<li>[android] fix ViewHolder NPE f9005ab</li>
+<li>[android] bug fix ViewHolder NPE 86dd101</li>
+<li>[android] fix build b14dd26</li>
+<li>[android] fix cell memory leak c03fdc1</li>
+<li>[html5] fix e2e test ci 77f14af</li>
+<li>[ios] fix type of callback params 2aa8f47</li>
+<li>[android] fix sdk init time measurement 3d7cd02</li>
+<li>[android] fix sdk init time measurement f4cbfd0</li>
+<li>[android] fix sdk init time measurement 8cffa5a</li>
+<li>[ios] fix stream fetch response type 9a7c296</li>
+<li>[android] forbid except cell、header、fixed、refresh and loading 114860f</li>
+<li>[android] fix comment cf53fd3</li>
+<li>[android] fix build 82a03fd</li>
+<li>[android] WXUtils bugfix 3655d9d</li>
+<li>[android] bug fix - setProperty class cast d567f89</li>
+<li>[android] fix argument format crash 1baac57</li>
+<li>[android] function name fix : hasAppearAndDisappearEvent 1f8b501</li>
+<li>[android] fix NPE crash in textarea nad modalModule c3a08ff</li>
+<li>[ios] fix bug when url has chinese character. b7e2c2f</li>
+<li>[android] update so fix not delRef argument b0db514</li>
+<li>[jsfm] fixed repeat bug when update values with new object references 371e58c</li>
+<li>[android] fix slider initialization crash. 4c52d33</li>
+<li>[android] add a debugger switch, decouple the dept between inspector and debugger dfa71c4</li>
+<li>[android] fix bug sticky not show dc3ca4d</li>
+<li>[android] fix component register type missed 92a92dc</li>
+<li>[android] sticky null child bug fix 541b68b</li>
+<li>[android] fix list scroller default height fc0aa58</li>
+<li>[android] fix indicator default style 610624c</li>
+<li>[android] fix embed page appear event 71a5360</li>
+<li>[android] update debug manifest 0541126</li>
+<li>[android] update JSF to 0.14.6 fix bind data error 4f7e3c8</li>
+<li>[android] fix bug mChild NPE a313b81</li>
+<li>[android] fix sticky offsetX 1bae906</li>
+<li>[jsfm] fixed updateMark error in compileType 9533431</li>
+<li>[jsfm] fixed updateMark error in compileType 5ea0132</li>
+<li>[android] Sticky fast fling bug fix 7092c6a</li>
+<li>[android] fix view appear event 4bf67e4</li>
+<li>[android] fix list scroll to 6355fc6</li>
+<li>[ios] fix default debug value 79daf2f</li>
+<li>[android] fix list scroll to ad0201b</li>
+<li>[ios] fix stat 2d3ab94</li>
+<li>[android] refresh the instance when reload called by the debug server 99392db</li>
+<li>[android] add a stop method to IWXDebugProxy b06d352</li>
+<li>[android] sticky bug fix f9d3265</li>
+<li>[android] fix list scrollTo a198b2e</li>
+<li>[android] fix scroller getView and getInnerView 4fa0453</li>
+<li>[android] refresh the instance when reload called by the debug server fd2be06</li>
+<li>[android] add a stop method to IWXDebugProxy 5789700</li>
+<li>[android] refresh the instance when reload called by the debug server 5ddf782</li>
+<li>[android] add a stop method to IWXDebugProxy 79cd97b</li>
+<li>[ios] fix modal bug about message is number d0cdaf9</li>
+<li>[html5] fix fire event 978c454</li>
+<li>[android] bug fix event lost f9c4357</li>
+<li>[android] add debug log cae86fa</li>
+<li>[html5] fix typo b84a1b3</li>
+<li>[html5] fix lint 8e905dc</li>
+<li>[android] fix bug - setLayout 0b5082f</li>
+<li>[jsfm] fixed native param format of setTimeout in app.differ a9f101e</li>
+<li>[ios] cancel AppDelegate.m debug annotation 03abcf8</li>
+<li>[android] fix bug - scroller height error 7458441</li>
+<li>[ios] support weex-devtool and weex –debugger 714c924</li>
+<li>[ios] resume original logger debug feature a144699</li>
+<li>[ios] modify the debug switch, update WXDebugTool.h/m file 1ce1277</li>
+<li>[android] fix input restore init value when batch 3a54da2</li>
+<li>[android] fix build 8450473</li>
+<li>[android] fix switch fireevent with domchange b6c2d31</li>
+<li>[android]  fix input change event 58563b5</li>
+<li>[jsfm] fixed repeat binding da9f40d</li>
+<li>[html5] fix typo 09bcdb3</li>
+<li>[ios] bug fix: slider is embed in list cell d56c7ec</li>
+<li>[ios] fix typo for wrong quote in Podfile ab8a83b</li>
+<li>[html5] fix loadmore offset of list 69ed65a</li>
+<li>[android] fix model callback data from string to json 3aed566</li>
+<li>[android] use diff vars flag the remote debug 5e976fc</li>
+<li>[html5] fix typo b8eec69</li>
+<li>[android] fix bug - refresh not compatible MI2 c814cd9</li>
+<li>[android] fix problem that session is null and init framework failed b985d59</li>
+<li>[ios] fix element cssstyle selected bug 41450a9</li>
+<li>[ios] fix crash from cssstyle e079e5c</li>
+<li>[android] update the debug init sequence to make sure the handshake well 28741da</li>
+<li>[android] fix example file name fc7862c</li>
+<li>[android] update debug switch f9369bb</li>
+<li>[android] reuse image adapter for avoid Fresco bug 62dc67c</li>
+<li>[android] add debug proxy, adapt to the weex-debugger d93f9e5</li>
+<li>[android] fix NPE in stream f5f8a4d</li>
+<li>[android] fix getScreenWidth npe e264f2a</li>
+<li>[android] fix register order 5c8a264</li>
+<li>[ios] Stupid scoll view, always reset content offset to zero after insert cells, fixed it by hooking 981dcd6</li>
+<li>[ios] fix data type d815e2a</li>
+<li>[ios] update debug tool 3d82054</li>
+<li>[ios] fix input component width calculation ba9a3b7</li>
+<li>[ios] fix notes about WXComponent+ViewManagement d31e8b6</li>
+<li>[android] fix list component addsubview error 69c3286</li>
+<li>[ios] fix inverted-logic 773bea7</li>
+<li>[android] fix crash when list append tree 686e450</li>
+<li>[ios] fix playground scan qr code bug 28f7de2</li>
+<li>[android] fix bug - Scroll getView 647a927</li>
+<li>[android] fix bug - delete  77680f1</li>
+<li>[android] fix bug - nested scroll ac50cd2</li>
+<li>[android] fix onTouchEvent bug 911e569</li>
+<li>[ios] fix thread safe method indexOfObject in array 1623165</li>
+<li>[ios] remove the timing of network debug 5b00fe5</li>
+<li>[ios] fix warning e1d496c</li>
+</ul>
+</li>
+</ul>
+<h3 id="Downloads-3"><a href="#Downloads-3" class="headerlink" title="Downloads"></a>Downloads</h3><ul>
+<li><a href="https://github.com/alibaba/weex/archive/v0.7.0.zip" target="_blank" rel="external">Source code (zip)</a></li>
+<li><a href="https://github.com/alibaba/weex/archive/v0.7.0.tar.gz" target="_blank" rel="external">Source code (tar.gz)</a></li>
+<li><a href="https://cocoapods.org/pods/WeexSDK" target="_blank" rel="external">Cocoapods WeexSDK</a></li>
+<li><a href="https://bintray.com/alibabaweex/maven/weex_sdk" target="_blank" rel="external">Bintray weex_sdk</a></li>
+</ul>
+<h2 id="v0-6-1"><a href="#v0-6-1" class="headerlink" title="v0.6.1"></a>v0.6.1</h2><hr>
+<ul>
+<li>New Features<ol>
+<li><a href="https://github.com/alibaba/weex/tree/dev/ios" target="_blank" rel="external">iOS has been open sourced</a></li>
+<li><a href="https://github.com/alibaba/weex/blob/v0.6.1/doc/references/common-event.md#page-event" target="_blank" rel="external">Lifecycle Page Event</a>: viewappear, viewdisappear</li>
+<li><a href="https://github.com/alibaba/weex/blob/v0.6.1/doc/modules/stream.md#fetchoptions-callbackprogresscallback" target="_blank" rel="external">fetch</a></li>
+<li><a href="https://github.com/alibaba/weex/blob/v0.6.1/doc/components/text.md#styles" target="_blank" rel="external">line-height</a></li>
+<li><a href="https://github.com/alibaba/weex/blob/v0.6.1/doc/components/list.md" target="_blank" rel="external">list component</a> <ul>
+<li>support sticky header </li>
+<li>support scrollToElement API</li>
+<li>support nested horizontal scroller</li>
+<li>support cell children nodes event: appear/disappear</li>
+</ul>
+</li>
+<li><a href="https://github.com/alibaba/weex/blob/v0.6.1/doc/references/gesture.md" target="_blank" rel="external">Gesture</a>: panstart/panmove/panend, swipe, longpress</li>
+<li>Improve Android text compatibility</li>
+</ol>
+</li>
+<li>Performance<ol>
+<li>iOS, iPhone 5c, rendering frame rate ascends from 45FPS to 52FPS</li>
+<li>Android, Redmi Note 1, loading time of the first screen  descends from 602ms to 480ms</li>
+<li>Improve Android animation performance</li>
+</ol>
+</li>
+<li><p>Tools</p>
+<ol>
+<li><a href="https://www.npmjs.com/package/weex-toolkit" target="_blank" rel="external">weex-toolkit</a> supports require and generator</li>
+<li>Playground supports runtime performance viewer</li>
+<li><p><a href="https://github.com/alibaba/weex/blob/v0.6.1/doc/tools/devtools.md" target="_blank" rel="external">Weex DevTools</a></p>
+<p><img src="https://img.alicdn.com/tps/TB1O.nwKFXXXXX8XpXXXXXXXXXX-1436-811.png" width="600"></p>
+</li>
+</ol>
+</li>
+</ul>
+<p>Bugfix</p>
+<ul>
+<li>[android] fix view appear event 4bf67e4</li>
+<li>[android] fix list scroll to 6355fc6</li>
+<li>[ios] fix default debug value 79daf2f</li>
+<li>[android] fix list scroll to ad0201b</li>
+<li>[android] fix build 5d1286c</li>
+<li>[android] bug fix 6a1788e</li>
+<li>[ios] fix stat 2d3ab94</li>
+<li>[android] bug fix 60073af</li>
+<li>[android] refresh the instance when reload called by the debug server 99392db</li>
+<li>[android] add a stop method to IWXDebugProxy b06d352</li>
+<li>[android] sticky bug fix f9d3265</li>
+<li>[android] fix build 62ee68a</li>
+<li>[android] fix list scrollTo a198b2e</li>
+<li>[android] fix scroller getView and getInnerView 4fa0453</li>
+<li>[android] refresh the instance when reload called by the debug server fd2be06</li>
+<li>[android] add a stop method to IWXDebugProxy 5789700</li>
+<li>[android] bug fix 7a83ddc</li>
+<li>[android] refresh the instance when reload called by the debug server 5ddf782</li>
+<li>[android] add a stop method to IWXDebugProxy 79cd97b</li>
+<li>[html5] fix fire event 978c454</li>
+<li>[android] bug fix event lost f9c4357</li>
+<li>[android] add debug log cae86fa</li>
+<li>[html5] fix typo b84a1b3</li>
+<li>[html5] fix lint 8e905dc</li>
+<li>[android] fix bug - setLayout 0b5082f</li>
+<li>[jsfm] fixed native param format of setTimeout in app.differ a9f101e</li>
+<li>[ios] cancel AppDelegate.m debug annotation 03abcf8</li>
+<li>[android] fix bug - scroller height error 7458441</li>
+<li>[ios] support weex-devtool and weex –debugger 714c924</li>
+<li>[ios] resume original logger debug feature a144699</li>
+<li>[ios] modify the debug switch, update WXDebugTool.h/m file 1ce1277</li>
+<li>[android] fix input restore init value when batch 3a54da2</li>
+<li>[android] fix build 8450473</li>
+<li>[android] fix switch fireevent with domchange b6c2d31</li>
+<li>[android]  fix input change event 58563b5</li>
+<li>[jsfm] fixed repeat binding da9f40d</li>
+<li>[html5] fix typo 09bcdb3</li>
+<li>[ios] bug fix: slider is embed in list cell d56c7ec</li>
+<li>[ios] fix typo for wrong quote in Podfile ab8a83b</li>
+<li>[html5] fix loadmore offset of list 69ed65a</li>
+<li>[android] fix build 0f39533</li>
+<li>[android] fix model callback data from string to json 3aed566</li>
+<li>[android] use diff vars flag the remote debug 5e976fc</li>
+<li>[html5] fix typo b8eec69</li>
+<li>[html5] fix ignore de5837a</li>
+<li>[android] fix bug - refresh not compatible MI2 c814cd9</li>
+<li>[android] fix problem that session is null and init framework failed b985d59</li>
+<li>[ios] fix element cssstyle selected bug 41450a9</li>
+<li>[ios] fix crash from cssstyle e079e5c</li>
+<li>[android] update the debug init sequence to make sure the handshake well 28741da</li>
+<li>[android] fix example file name fc7862c</li>
+<li>[ios] fix #567 3be6561</li>
+<li>[android] update debug switch f9369bb</li>
+<li>[android] reuse image adapter for avoid Fresco bug 62dc67c</li>
+<li>[android] add debug proxy, adapt to the weex-debugger d93f9e5</li>
+<li>[android] fix ut bug 85c5cae</li>
+<li>[android] fix NPE in stream f5f8a4d</li>
+<li>[android] fix getScreenWidth npe e264f2a</li>
+<li>[android] fix register order 5c8a264</li>
+<li>[ios] Stupid scoll view, always reset content offset to zero after insert cells, fixed it by hooking 981dcd6</li>
+<li>[ios] fix data type d815e2a</li>
+<li>[ios] update debug tool 3d82054</li>
+<li>[ios] fix input component width calculation ba9a3b7</li>
+<li>[ios] fix notes about WXComponent+ViewManagement d31e8b6</li>
+<li>[android] fix list component addsubview error 69c3286</li>
+<li>[ios] fix inverted-logic 773bea7</li>
+<li>[android] fix crash when list append tree 686e450</li>
+<li>[ios] fix playground scan qr code bug 28f7de2</li>
+<li>[android] fix bug - Scroll getView 647a927</li>
+<li>[android] fix bug - delete  77680f1</li>
+<li>[android] fix bug - nested scroll ac50cd2</li>
+<li>[android] fix onTouchEvent bug 911e569</li>
+<li>[ios]fix thread safe method indexOfObject in array 1623165</li>
+<li>[ios] remove the timing of network debug 5b00fe5</li>
+<li>[ios] fix warning e1d496c</li>
+<li>[ios] remove unnecessary removeFromSuperView from unload method and fix async unload view issue in list. b6c3a62</li>
+<li>[android] fix unit test 4dda4ac</li>
+<li>[android] update power info and debug protocol, mark stable 3323776</li>
+<li>[ios] fix indicator style  abnormal when update 7dcb54b</li>
+<li>[ios] fix list delete issue 579b720</li>
+<li>[ios] fix indicator item size abnormal e3cd91b</li>
+<li>[android] bufix NPE 904146e</li>
+<li>[android] fix  multithreading exception b1c2af1</li>
+<li>[android] update debug info 7a82747</li>
+<li>[android] fit bug - indicator error 673b7b6</li>
+<li>[android] fix bug loading-indicator 981728a</li>
+<li>[android] fix unit test aafec20</li>
+<li>[android] bugfix  getInstance singleton 397dc39</li>
+<li>[android] fix WXSwipeRefreshLayout 745705d</li>
+<li>[ios] fix scan qrcode after back from scan result failed 0b308aa</li>
+<li>[android] fix unit test 02d8489</li>
+<li>[android] fix create body NPE 89690f7</li>
+<li>[android] fix getView()==null crash b0ca974</li>
+<li>[android] bugfix NPE 93ef1e1</li>
+<li>[android] bug fix NPE when instance destroy e7aad12</li>
+<li>[android] NPE bugfix 9f15552</li>
+<li>[android] NPE bug fix when recycleImage 4edecef</li>
+<li>[android] bugfix layout can not be reset for list b19c0a1</li>
+<li>[android] add DebugAdapter f10cf9c</li>
+<li>[android] fix text layout unexpect quit when text is zero-length content 9320623</li>
+<li>[android] fix spell error 23c5440</li>
+<li>[android] update debug 567e9e0</li>
+<li>[android] fix list remove cell crash bug 84844f9</li>
+<li>[android] fix unit test be636fb</li>
+<li>[android] update debug tool 8d9cad9</li>
+<li>[android] bug fix remove fixed node f867bd1</li>
+<li>[android] update debug tool 5b75507</li>
+<li>[android] fix unit test 40b10de</li>
+<li>[android] update debug.move some code from WXPrettyFish to WXDebugTool c70927b</li>
+<li>[android] update debug 6047c43</li>
+<li>[android] update debug add class ScalpelFrameLayout d956819</li>
+<li>[android] fix status badge url 35a491b</li>
+<li>[android] fix border style 329f128</li>
+<li>[android] update weex_debug grade wrapper 793c67b</li>
+<li>[android] fix fetch response data 1503431</li>
+<li>[android] fix progress callback 1f72495</li>
+<li>[android] bugfix init sdk b6946ad</li>
+<li>[android] NPE fix fc9b595</li>
+<li>[android] update how-to-debug.md playgroup-app.md c61d7b4</li>
+<li>[android] update debug function 1bcfdd3</li>
+<li>[android] fix v8 compile potential crash &amp; closed v8  snapshot 6d159a6</li>
+<li>[android] update debug d7c6d61</li>
+<li>[android] fix v8 compile potential crash &amp; closed v8  snapshot 67b01a1</li>
+</ul>
+<h3 id="Downloads-4"><a href="#Downloads-4" class="headerlink" title="Downloads"></a>Downloads</h3><ul>
+<li><a href="https://github.com/alibaba/weex/archive/v0.6.1.zip" target="_blank" rel="external">Source code (zip)</a></li>
+<li><a href="https://github.com/alibaba/weex/archive/v0.6.1.tar.gz" target="_blank" rel="external">Source code (tar.gz)</a></li>
+<li><a href="https://cocoapods.org/pods/WeexSDK" target="_blank" rel="external">Cocoapods WeexSDK</a></li>
+<li><a href="https://bintray.com/alibabaweex/maven/weex_sdk" target="_blank" rel="external">Bintray weex_sdk</a></li>
+</ul>
+<h2 id="v0-5-0"><a href="#v0-5-0" class="headerlink" title="v0.5.0"></a>v0.5.0</h2><hr>
+<h3 id="New-Features"><a href="#New-Features" class="headerlink" title="New Features"></a>New Features</h3><ol>
+<li><a href="https://github.com/alibaba/weex/blob/dev/doc/components/wxc-tabbar.md" target="_blank" rel="external">TabBar</a> is a specialized component corresponding to the radio-style selection.</li>
+<li><a href="https://github.com/alibaba/weex/blob/dev/doc/components/wxc-navpage.md" target="_blank" rel="external">NavPage</a> contains a navbar at the top of the window and an embed content page.</li>
+<li><a href="https://github.com/alibaba/weex/blob/dev/examples/showcase/new-fashion/index.we" target="_blank" rel="external">Activity Showcase</a> is built by composing TabBar and NavPage.</li>
+<li><a href="https://github.com/alibaba/weex/blob/dev/doc/components/web.md" target="_blank" rel="external">Web</a> displays web content in the weex page.</li>
+<li><a href="https://github.com/alibaba/weex/blob/dev/doc/components/a.md" target="_blank" rel="external">A</a>  defines a hyperlink to a page in the web.</li>
+<li><code>Text</code> supports style <a href="https://github.com/alibaba/weex/blob/dev/doc/references/text-style.md#properties" target="_blank" rel="external">text-overflow</a>.</li>
+<li><code>Image</code> supports attribute <a href="https://github.com/alibaba/weex/blob/dev/doc/components/image.md#styles" target="_blank" rel="external">resize</a>.</li>
+<li><code>List</code> supports <a href="https://github.com/alibaba/weex/blob/dev/doc/components/list.md#events" target="_blank" rel="external">events <code>appear</code>, <code>disappear</code>, <code>loadmore</code></a> and <a href="https://github.com/alibaba/weex/blob/dev/doc/components/list.md#child-components" target="_blank" rel="external">refresh</a>.</li>
+<li>New Syntax<ol>
+<li><a href="https://github.com/alibaba/weex/blob/dev/doc/syntax/events.md#inline-handler" target="_blank" rel="external">Inline event</a> supports a expression of calling event handler in template.</li>
+<li><a href="https://github.com/alibaba/weex/blob/dev/doc/modules#how-to-use" target="_blank" rel="external">Require Native Module</a> requires a native module by <code>require(&#39;@weex-module/moduleName&#39;)</code>.</li>
+<li><a href="https://github.com/alibaba/weex/blob/dev/doc/syntax/data-binding.md#computed-properties" target="_blank" rel="external">Computed Property</a> supports complicated logic in data bindings.</li>
+<li><a href="https://github.com/alibaba/weex/blob/dev/doc/syntax/display-logic.md#a-extension-of-repeat-syntax" target="_blank" rel="external">New Repeat Syntax</a> is easy to access the key or value of repeated object.</li>
+</ol>
+</li>
+</ol>
+<h3 id="Bugfixes"><a href="#Bugfixes" class="headerlink" title="Bugfixes"></a>Bugfixes</h3><ul>
+<li>[android] fix crash <a href="https://github.com/alibaba/weex/commit/4fa27716d82d90c5e16d023c6e55cf65eeb9136b" target="_blank" rel="external">https://github.com/alibaba/weex/commit/4fa27716d82d90c5e16d023c6e55cf65eeb9136b</a></li>
+<li>[android] fix #20, android slider indicator edge is not smooth <a href="https://github.com/alibaba/weex/commit/5b8f3a7e6d4d547d892223d8abc02ac2084b5a6e" target="_blank" rel="external">https://github.com/alibaba/weex/commit/5b8f3a7e6d4d547d892223d8abc02ac2084b5a6e</a></li>
+<li>[android] fix List <a href="https://github.com/alibaba/weex/commit/4acc90a1c8c0a9181d91e2ef984266c39d255cac" target="_blank" rel="external">https://github.com/alibaba/weex/commit/4acc90a1c8c0a9181d91e2ef984266c39d255cac</a></li>
+<li>[android] fix NavBar <a href="https://github.com/alibaba/weex/commit/8b4ea4f0c18d4e732749c025ea496c59d19004a5" target="_blank" rel="external">https://github.com/alibaba/weex/commit/8b4ea4f0c18d4e732749c025ea496c59d19004a5</a></li>
+<li>[android] fix position=fixed did not setLayout <a href="https://github.com/alibaba/weex/commit/3b9128c2a421243d7c28f64abaebcbffd6a2ec73" target="_blank" rel="external">https://github.com/alibaba/weex/commit/3b9128c2a421243d7c28f64abaebcbffd6a2ec73</a></li>
+<li>[jsfm] fix change data when ready <a href="https://github.com/alibaba/weex/commit/0a1aa5db40713abb2923a2effb06c28349ac0213" target="_blank" rel="external">https://github.com/alibaba/weex/commit/0a1aa5db40713abb2923a2effb06c28349ac0213</a></li>
+<li>[jsfm] fix when the key of trackby is zero <a href="https://github.com/alibaba/weex/commit/efa50707efd24cfb775c7e0f467279bbaade1fd6" target="_blank" rel="external">https://github.com/alibaba/weex/commit/efa50707efd24cfb775c7e0f467279bbaade1fd6</a></li>
+<li>[jsfm] fix append tree <a href="https://github.com/alibaba/weex/commit/d3871b308e642fd71c2b7ba630aed0f573079daa" target="_blank" rel="external">https://github.com/alibaba/weex/commit/d3871b308e642fd71c2b7ba630aed0f573079daa</a></li>
+<li>[jsfm] fix transformer version <a href="https://github.com/alibaba/weex/commit/9f21bccb07869883edc261516272aa5e41933c78" target="_blank" rel="external">https://github.com/alibaba/weex/commit/9f21bccb07869883edc261516272aa5e41933c78</a></li>
+<li>[jsfm] fix inline event test <a href="https://github.com/alibaba/weex/commit/1ce3212a83c58187a2be0df43eecafababce8ecb" target="_blank" rel="external">https://github.com/alibaba/weex/commit/1ce3212a83c58187a2be0df43eecafababce8ecb</a></li>
+<li>[jsfm] fixed transformer 0.3 <a href="https://github.com/alibaba/weex/commit/66b647afa08671812a7c5e11b440c23ae18750d9" target="_blank" rel="external">https://github.com/alibaba/weex/commit/66b647afa08671812a7c5e11b440c23ae18750d9</a></li>
+<li>[jsfm] fixed jscs error <a href="https://github.com/alibaba/weex/commit/a5067d52e2a1708852ab704a9004f5c35f3451b6" target="_blank" rel="external">https://github.com/alibaba/weex/commit/a5067d52e2a1708852ab704a9004f5c35f3451b6</a></li>
+<li>[jsfm] hotfixed transformer version bug and fixed a small sample code bug <a href="https://github.com/alibaba/weex/commit/48862dc40375bbc8caa30384d45b031440694f3b" target="_blank" rel="external">https://github.com/alibaba/weex/commit/48862dc40375bbc8caa30384d45b031440694f3b</a></li>
+<li>[jsfm] fix callback <a href="https://github.com/alibaba/weex/commit/2f85737c51ebd037a72db1c18daf4a9690c45837" target="_blank" rel="external">https://github.com/alibaba/weex/commit/2f85737c51ebd037a72db1c18daf4a9690c45837</a></li>
+<li>[jsfm] fix #1 #12 <a href="https://github.com/alibaba/weex/commit/56e6a79c50f1b2fd3c0ecebec000e9a693cb4b92" target="_blank" rel="external">https://github.com/alibaba/weex/commit/56e6a79c50f1b2fd3c0ecebec000e9a693cb4b92</a></li>
+<li>[jsfm] fix undefined for element’s depth <a href="https://github.com/alibaba/weex/commit/2b7eb9ea82e6552b6e57fddb332dfbbfa3401473" target="_blank" rel="external">https://github.com/alibaba/weex/commit/2b7eb9ea82e6552b6e57fddb332dfbbfa3401473</a></li>
+<li>[jsfm] fix calling functional data-binding multiply <a href="https://github.com/alibaba/weex/commit/dcd9b660912bea69b17622e13fddb80ecb42bc35" target="_blank" rel="external">https://github.com/alibaba/weex/commit/dcd9b660912bea69b17622e13fddb80ecb42bc35</a></li>
+</ul>
+<h3 id="Downloads-5"><a href="#Downloads-5" class="headerlink" title="Downloads"></a>Downloads</h3><ul>
+<li><a href="https://github.com/alibaba/weex/archive/v0.5.0.zip" target="_blank" rel="external">Source code (zip)</a></li>
+<li><a href="https://github.com/alibaba/weex/archive/v0.5.0.tar.gz" target="_blank" rel="external">Source code (tar.gz)</a></li>
+<li><a href="https://cocoapods.org/pods/WeexSDK" target="_blank" rel="external">Cocoapods WeexSDK</a></li>
+<li><a href="https://bintray.com/alibabaweex/maven/weex_sdk" target="_blank" rel="external">Bintray weex_sdk</a></li>
+</ul>
+<hr>
+
+  </div>
+  
+</article>
+</div>
+  
+  <footer id="footer">
+  <div class="row clearfix">
+    <div class="ali-logo">
+      <img src="//gw.alicdn.com/tps/TB1Ef93PXXXXXaXXpXXXXXXXXXX-252-126.png" alt="Alibaba">
+    </div>
+    <div class="dropdown select-lang">
+      <a href="javascript:;" class="dropdown-toggle">
+        Language
+        <span class="caret"></span>
+      </a>
+      <ul class="dropdown-menu pick-lang">
+        <li>
+          <a href="/releasenote.html" data-lang="en">English</a>
+        </li>
+        <li>
+          <a href="/cn/releasenote.html" data-lang="zh-cn">中文</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <p><span>Released under </span>Apache License 2.0</p>
+  </div>
+  <div class="row clearfix">
+    <div class="cell">Copyright(c) 2009-2017 The Apache Software Foundation</div>
+  </div>
+</footer>
+  <div style="display: none;">
+  <script src="//s95.cnzz.com/z_stat.php?id=1261496509&web_id=1261496509" language="JavaScript"></script>
+</div>
+
+  <script src="/js/reqwest.js"></script>
+  <script src="/js/common.js"></script>
+</body>
+</html>
