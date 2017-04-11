@@ -11,7 +11,7 @@
 <meta property="og:url" content="https://weex-project.io/references/components/input.html">
 <meta property="og:site_name" content="Weex">
 <meta property="og:description" content="inputThe weex builtin component input is used to create input controls to receive the user’s input characters. How a input component works varies considerably depending on the value of its type attrib">
-<meta property="og:updated_time" content="2017-03-30T03:42:55.000Z">
+<meta property="og:updated_time" content="2017-04-11T06:41:49.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="<input>">
 <meta name="twitter:description" content="inputThe weex builtin component input is used to create input controls to receive the user’s input characters. How a input component works varies considerably depending on the value of its type attrib">
@@ -478,11 +478,11 @@
           <ul class="chapter">
             
               <li>
-                <a href="/references/components/a.html" class="sidebar-link  ">&lt;a&gt;</a>
+                <a href="/references/components/indicator.html" class="sidebar-link  ">&lt;indicator&gt;</a>
               </li>
             
               <li>
-                <a href="/references/components/indicator.html" class="sidebar-link  ">&lt;indicator&gt;</a>
+                <a href="/references/components/a.html" class="sidebar-link  ">&lt;a&gt;</a>
               </li>
             
               <li>
@@ -1066,11 +1066,11 @@
           <ul class="chapter">
             
               <li>
-                <a href="/references/components/a.html" class="sidebar-link  ">&lt;a&gt;</a>
+                <a href="/references/components/indicator.html" class="sidebar-link  ">&lt;indicator&gt;</a>
               </li>
             
               <li>
-                <a href="/references/components/indicator.html" class="sidebar-link  ">&lt;indicator&gt;</a>
+                <a href="/references/components/a.html" class="sidebar-link  ">&lt;a&gt;</a>
               </li>
             
               <li>
@@ -1304,7 +1304,7 @@
       </h1>
     
   
-  <time class="article-date" datetime="2017-03-30T03:42:55.000Z">Updated time: 30/03/2017</time>
+  <time class="article-date" datetime="2017-04-11T06:41:49.000Z">Updated time: 11/04/2017</time>
 </header>
     <h1 id="input"><a href="#input" class="headerlink" title="input"></a>input</h1><p>The weex builtin component <code>input</code> is used to create input controls to receive the user’s input characters. How a <code>input</code> component works varies considerably depending on the value of its <code>type</code> attribute, such as <code>text</code>, <code>password</code>, <code>url</code>, <code>email</code>, <code>tel</code> etc.</p>
 <p><strong>Notes:</strong> does not support the common-event <code>click</code>. Please listen to the <code>input</code> or <code>change</code> event instead.</p>
@@ -1321,6 +1321,8 @@
 <li><p><code>autofocus</code>: a boolean attribute lets you specify that a form control should have input focus when the page loads.</p>
 </li>
 <li><p><code>maxlength</code>: <span class="api-version">v0.7+</span> a number value to specify maxlength of input.</p>
+</li>
+<li><p><code>return-key-type {string}</code>：<sup class="wx-v">v0.11</sup>the keybord returen key type support defalut;go;next;search;send,done.</p>
 </li>
 </ul>
 <h2 id="Styles"><a href="#Styles" class="headerlink" title="Styles"></a>Styles</h2><ul>
@@ -1356,10 +1358,17 @@
 <li>change: the change event is fired when a change to the component’s value is commited by the user. It always come after a ‘blur’ event.</li>
 <li>focus: a component has received focus.</li>
 <li>blur: a component has lost focus.</li>
+<li><p><code>return</code>:the return key click.</p>
+<p>   the object property of event:</p>
+<ul>
+<li><code>returnKeyType</code>: return key Type  of component</li>
+<li><code>value</code>: component text value</li>
+</ul>
+</li>
 </ul>
 <h3 id="common-events"><a href="#common-events" class="headerlink" title="common events"></a>common events</h3><p>check out <a href="../common-event.html">common events</a></p>
 <ul>
-<li>support ‘appear’ / ‘disappear’ event. </li>
+<li>support ‘appear’ / ‘disappear’ event.</li>
 </ul>
 <h3 id="Methoads"><a href="#Methoads" class="headerlink" title="Methoads"></a>Methoads</h3><ul>
 <li><p><code>focus()</code> <span class="api-version">v0.9+</span></p>
@@ -1367,6 +1376,20 @@
 </li>
 <li><p><code>blur()</code><span class="api-version">v0.9+</span></p>
 <p>The <code>blur()</code> method is used to remove focus from an input component and close soft keybord(if it has focus).</p>
+</li>
+</ul>
+<ul>
+<li><p><code>setSelectionRange(selectionStart,selectionEnd)</code>  <span class="api-version">v0.11+</span>set text selection range of input or textarea</p>
+<ul>
+<li><code>selectionStart {number}</code>:set starting location text selection range</li>
+<li><code>selectionEnd {number}</code>:set end location text selection range</li>
+</ul>
+</li>
+<li><p><code>getEditSelectionRange(callback[selectionStart,selectionEnd])</code>  <span class="api-version">v0.11+</span>get text selection range of input or textarea</p>
+<ul>
+<li><code>selectionStart {number}</code>:get starting location text selection range</li>
+<li><code>selectionEnd {number}</code>: get end location text selection range</li>
+</ul>
 </li>
 </ul>
 <h3 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h3><p>does not support the common-event ‘click’. Please listen to the ‘input’ or ‘change’ event instead.</p>

@@ -11,7 +11,7 @@
 <meta property="og:url" content="https://weex-project.io/references/components/refresh.html">
 <meta property="og:site_name" content="Weex">
 <meta property="og:description" content="refresh &amp;amp; loadingv0.6.1+ Loading ComponentsTo be rendered properly, the refresh/loading Components must appear inside the Scroller Component or the List Component. Child ComponentsAny other compon">
-<meta property="og:updated_time" content="2017-03-30T03:42:55.000Z">
+<meta property="og:updated_time" content="2017-04-11T06:41:49.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="<refresh> & <loading>">
 <meta name="twitter:description" content="refresh &amp;amp; loadingv0.6.1+ Loading ComponentsTo be rendered properly, the refresh/loading Components must appear inside the Scroller Component or the List Component. Child ComponentsAny other compon">
@@ -478,11 +478,11 @@
           <ul class="chapter">
             
               <li>
-                <a href="/references/components/a.html" class="sidebar-link  ">&lt;a&gt;</a>
+                <a href="/references/components/indicator.html" class="sidebar-link  ">&lt;indicator&gt;</a>
               </li>
             
               <li>
-                <a href="/references/components/indicator.html" class="sidebar-link  ">&lt;indicator&gt;</a>
+                <a href="/references/components/a.html" class="sidebar-link  ">&lt;a&gt;</a>
               </li>
             
               <li>
@@ -1066,11 +1066,11 @@
           <ul class="chapter">
             
               <li>
-                <a href="/references/components/a.html" class="sidebar-link  ">&lt;a&gt;</a>
+                <a href="/references/components/indicator.html" class="sidebar-link  ">&lt;indicator&gt;</a>
               </li>
             
               <li>
-                <a href="/references/components/indicator.html" class="sidebar-link  ">&lt;indicator&gt;</a>
+                <a href="/references/components/a.html" class="sidebar-link  ">&lt;a&gt;</a>
               </li>
             
               <li>
@@ -1304,7 +1304,7 @@
       </h1>
     
   
-  <time class="article-date" datetime="2017-03-30T03:42:55.000Z">Updated time: 30/03/2017</time>
+  <time class="article-date" datetime="2017-04-11T06:41:49.000Z">Updated time: 11/04/2017</time>
 </header>
     <h1 id="refresh-amp-loading"><a href="#refresh-amp-loading" class="headerlink" title="refresh &amp; loading"></a>refresh &amp; loading</h1><p><span class="weex-version">v0.6.1+</span></p>
 <h2 id="Loading-Components"><a href="#Loading-Components" class="headerlink" title="Loading Components"></a>Loading Components</h2><p>To be rendered properly, the refresh/loading Components must appear inside the Scroller Component or the List Component.</p>
@@ -1336,8 +1336,10 @@
 <p>Other attributes please check out the <a href="../common-attrs.html">common attributes</a>.</p>
 <h3 id="Styles-1"><a href="#Styles-1" class="headerlink" title="Styles"></a>Styles</h3><p>common styles: check out <a href="../common-style.html">common styles for components</a></p>
 <h3 id="Events-1"><a href="#Events-1" class="headerlink" title="Events"></a>Events</h3><ul>
-<li>onrefresh triggered when the scroller has been pulled down</li>
-<li>onpullingdown available on Android. triggered when the scroller has been pulled down. you can get dy, headerHeight, maxHeight from onpullingdowns event object.</li>
+<li><code>onrefresh</code>: triggered when the scroller has been pulled down</li>
+<li><p><code>onpullingdown</code>: triggered when the scroller has been pulled down. you can get <code>dy, pullingDistance, viewHeight, type</code> from onpullingdown event object.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">dy: the differencen between two scroll actions</div><div class="line">pullingDistance: the distance of pulling</div><div class="line">viewHeight: the height of refreshView </div><div class="line">type: &quot;pullingdown&quot; constant string type for this event</div></pre></td></tr></table></figure>
+</li>
 </ul>
 <h3 id="Restrictions-1"><a href="#Restrictions-1" class="headerlink" title="Restrictions"></a>Restrictions</h3><ul>
 <li>refresh/loading does not support remove action, may support in Weex 0.9.</li>
